@@ -1,4 +1,4 @@
-import { debounce } from 'debounce';
+import debounce from 'debounce';
 import type { ChangeEvent, MouseEvent, ReactNode } from 'react';
 import { useCallback, useState } from 'react';
 import tw, { styled } from 'twin.macro';

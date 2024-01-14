@@ -1,6 +1,6 @@
-import { ChevronDoubleRightIcon } from '@heroicons/react/solid';
+import { ChevronDoubleRightIcon } from '@heroicons/react/24/solid';
 import classNames from 'classnames';
-import { debounce } from 'debounce';
+import debounce from 'debounce';
 import type { KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ITerminalInitOnlyOptions, ITerminalOptions, ITheme } from 'xterm';

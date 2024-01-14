@@ -1,6 +1,6 @@
-import type { StyledComponent } from 'styled-components';
+import type { IStyledComponent } from 'styled-components';
 
-export const withSubComponents = <C extends StyledComponent<any, any>, P extends Record<string, any>>(
+export const withSubComponents = <C extends IStyledComponent<any, any>, P extends Record<string, any>>(
     component: C,
     properties: P,
 ): C & P => {

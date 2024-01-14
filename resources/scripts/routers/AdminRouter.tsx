@@ -1,16 +1,16 @@
 import {
     CogIcon,
-    DatabaseIcon,
+    CircleStackIcon,
     FolderIcon,
-    GlobeIcon,
-    OfficeBuildingIcon,
-    ReplyIcon,
+    GlobeAltIcon,
+    BuildingOfficeIcon,
+    ArrowUturnLeftIcon,
     ServerIcon,
-    TerminalIcon,
+    CommandLineIcon,
     UserGroupIcon,
     UsersIcon,
-    ViewGridIcon,
-} from '@heroicons/react/outline';
+    TableCellsIcon,
+} from '@heroicons/react/24/outline';
 import { useStoreState } from 'easy-peasy';
 import { useState } from 'react';
 import { NavLink, Route, Routes } from 'react-router-dom';
@@ -72,7 +72,7 @@ function AdminRouter() {
                 <Sidebar.Wrapper>
                     <Sidebar.Section>Administration</Sidebar.Section>
                     <NavLink to="/admin" end>
-                        <OfficeBuildingIcon />
+                        <BuildingOfficeIcon />
                         <span>Overview</span>
                     </NavLink>
                     <NavLink to="/admin/settings">
@@ -81,11 +81,11 @@ function AdminRouter() {
                     </NavLink>
                     <Sidebar.Section>Management</Sidebar.Section>
                     <NavLink to="/admin/databases">
-                        <DatabaseIcon />
+                        <CircleStackIcon />
                         <span>Databases</span>
                     </NavLink>
                     <NavLink to="/admin/locations">
-                        <GlobeIcon />
+                        <GlobeAltIcon />
                         <span>Locations</span>
                     </NavLink>
                     <NavLink to="/admin/nodes">
@@ -93,7 +93,7 @@ function AdminRouter() {
                         <span>Nodes</span>
                     </NavLink>
                     <NavLink to="/admin/servers">
-                        <TerminalIcon />
+                        <CommandLineIcon />
                         <span>Servers</span>
                     </NavLink>
                     <NavLink to="/admin/users">
@@ -106,7 +106,7 @@ function AdminRouter() {
                     </NavLink>
                     <Sidebar.Section>Service Management</Sidebar.Section>
                     <NavLink to="/admin/nests">
-                        <ViewGridIcon />
+                        <TableCellsIcon />
                         <span>Nests</span>
                     </NavLink>
                     <NavLink to="/admin/mounts">
@@ -115,7 +115,7 @@ function AdminRouter() {
                     </NavLink>
                 </Sidebar.Wrapper>
                 <NavLink to="/" css={tw`mt-auto mb-3`}>
-                    <ReplyIcon />
+                    <ArrowUturnLeftIcon />
                     <span>Return</span>
                 </NavLink>
                 <Sidebar.User>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ClipboardListIcon } from '@heroicons/react/outline';
+import { ClipboardDocumentListIcon } from '@heroicons/react/24/outline';
 import { Dialog } from '@/components/elements/dialog';
 import { Button } from '@/components/elements/button/index';
 
@@ -27,7 +27,7 @@ export default ({ meta }: { meta: Record<string, unknown> }) => {
                 }
                 onClick={() => setOpen(true)}
             >
-                <ClipboardListIcon className={'h-5 w-5'} />
+                <ClipboardDocumentListIcon className={'h-5 w-5'} />
             </button>
         </div>
     );

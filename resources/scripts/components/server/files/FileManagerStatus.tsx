@@ -1,4 +1,4 @@
-import { CloudUploadIcon, XIcon } from '@heroicons/react/solid';
+import { CloudArrowUpIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { useSignal } from '@preact/signals-react';
 import { useContext, useEffect } from 'react';
 
@@ -53,7 +53,7 @@ const FileUploadList = () => {
                         onClick={cancelFileUpload.bind(this, name)}
                         className={'text-slate-500 transition-colors duration-75 hover:text-slate-200'}
                     >
-                        <XIcon className={'h-5 w-5'} />
+                        <XMarkIcon className={'h-5 w-5'} />
                     </button>
                 </div>
             ))}
@@ -96,7 +96,7 @@ export default () => {
                         onClick={() => (open.value = true)}
                     >
                         <Spinner progress={(progress.uploaded / progress.total) * 100} className={'h-8 w-8'} />
-                        <CloudUploadIcon className={'absolute mx-auto h-3 animate-pulse'} />
+                        <CloudArrowUpIcon className={'absolute mx-auto h-3 animate-pulse'} />
                     </button>
                 </Tooltip>
             )}

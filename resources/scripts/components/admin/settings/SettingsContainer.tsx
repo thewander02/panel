@@ -1,4 +1,4 @@
-import { AdjustmentsIcon, ChipIcon, CodeIcon, MailIcon, ShieldCheckIcon } from '@heroicons/react/outline';
+import { AdjustmentsVerticalIcon, CpuChipIcon, CodeBracketSquareIcon, EnvelopeIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 import { Route, Routes } from 'react-router-dom';
 import tw from 'twin.macro';
 
@@ -24,19 +24,19 @@ export default () => {
 
             <SubNavigation>
                 <SubNavigationLink to="/admin/settings" name="General">
-                    <ChipIcon />
+                    <CpuChipIcon />
                 </SubNavigationLink>
                 <SubNavigationLink to="/admin/settings/mail" name="Mail">
-                    <MailIcon />
+                    <EnvelopeIcon />
                 </SubNavigationLink>
                 <SubNavigationLink to="/admin/settings/security" name="Security">
                     <ShieldCheckIcon />
                 </SubNavigationLink>
                 <SubNavigationLink to="/admin/settings/features" name="Features">
-                    <AdjustmentsIcon />
+                    <AdjustmentsVerticalIcon />
                 </SubNavigationLink>
                 <SubNavigationLink to="/admin/settings/advanced" name="Advanced">
-                    <CodeIcon />
+                    <CodeBracketSquareIcon />
                 </SubNavigationLink>
             </SubNavigation>
 

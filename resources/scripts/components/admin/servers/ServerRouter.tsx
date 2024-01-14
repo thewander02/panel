@@ -11,7 +11,7 @@ import { SubNavigation, SubNavigationLink } from '@/components/admin/SubNavigati
 import ServerSettingsContainer from '@/components/admin/servers/ServerSettingsContainer';
 import useFlash from '@/plugins/useFlash';
 import { useServerFromRoute } from '@/api/admin/server';
-import { AdjustmentsIcon, CogIcon, DatabaseIcon, FolderIcon, ShieldExclamationIcon } from '@heroicons/react/outline';
+import { AdjustmentsVerticalIcon, CogIcon, CircleStackIcon, FolderIcon, ShieldExclamationIcon } from '@heroicons/react/24/outline';
 
 export default () => {
     const params = useParams<'id'>();
@@ -52,11 +52,11 @@ export default () => {
 
             <SubNavigation>
                 <SubNavigationLink to={`/admin/servers/${params.id}`} name={'Settings'} icon={CogIcon} />
-                <SubNavigationLink to={`/admin/servers/${params.id}/startup`} name={'Startup'} icon={AdjustmentsIcon} />
+                <SubNavigationLink to={`/admin/servers/${params.id}/startup`} name={'Startup'} icon={AdjustmentsVerticalIcon} />
                 <SubNavigationLink
                     to={`/admin/servers/${params.id}/databases`}
                     name={'Databases'}
-                    icon={DatabaseIcon}
+                    icon={CircleStackIcon}
                 />
                 <SubNavigationLink to={`/admin/servers/${params.id}/mounts`} name={'Mounts'} icon={FolderIcon} />
                 <SubNavigationLink

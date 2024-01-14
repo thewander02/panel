@@ -1,4 +1,4 @@
-import { debounce } from 'debounce';
+import debounce from 'debounce';
 import React, { createRef, ReactElement, useEffect, useState } from 'react';
 import tw, { styled } from 'twin.macro';
 import Input from '@/components/elements/Input';

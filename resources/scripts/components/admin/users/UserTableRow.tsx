@@ -1,4 +1,4 @@
-import { BanIcon, DotsVerticalIcon, LockOpenIcon, PencilIcon, SupportIcon, TrashIcon } from '@heroicons/react/solid';
+import { NoSymbolIcon, Bars2Icon, LockOpenIcon, PencilIcon, LifebuoyIcon, TrashIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
 import Checkbox from '@/components/elements/inputs/Checkbox';
@@ -59,16 +59,16 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
                 <td className="whitespace-nowrap px-6 py-4">
                     <Dropdown>
                         <Dropdown.Button className="px-2">
-                            <DotsVerticalIcon />
+                            <Bars2Icon />
                         </Dropdown.Button>
                         <Dropdown.Item to={`/admin/users/${user.id}`} icon={<PencilIcon />}>
                             Edit
                         </Dropdown.Item>
-                        <Dropdown.Item icon={<SupportIcon />}>Reset Password</Dropdown.Item>
+                        <Dropdown.Item icon={<LifebuoyIcon />}>Reset Password</Dropdown.Item>
                         <Dropdown.Item icon={<LockOpenIcon />} disabled={!user.isUsingTwoFactor}>
                             Disable 2-FA
                         </Dropdown.Item>
-                        <Dropdown.Item icon={<BanIcon />}>Suspend</Dropdown.Item>
+                        <Dropdown.Item icon={<NoSymbolIcon />}>Suspend</Dropdown.Item>
                         <Dropdown.Gap />
                         <Dropdown.Item icon={<TrashIcon />} onClick={() => setVisible(true)} danger>
                             Delete Account

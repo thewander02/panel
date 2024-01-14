@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { debounce } from 'debounce';
+import debounce from 'debounce';
 
 type DebounceFn<V> = ((value: V) => void) & { clear: () => void };
 

@@ -1,4 +1,4 @@
-import { TrashIcon } from '@heroicons/react/outline';
+import { TrashIcon } from '@heroicons/react/24/outline';
 import type { FormikHelpers } from 'formik';
 import { Form, Formik, useFormikContext } from 'formik';
 import { useState } from 'react';

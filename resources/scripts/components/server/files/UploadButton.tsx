@@ -1,4 +1,4 @@
-import { CloudUploadIcon } from '@heroicons/react/outline';
+import { CloudArrowUpIcon } from '@heroicons/react/24/outline';
 import { useSignal } from '@preact/signals-react';
 import axios from 'axios';
 import { useEffect, useRef } from 'react';
@@ -126,7 +126,7 @@ export default ({ className }: WithClassname) => {
                                     'mx-10 flex w-full max-w-sm items-center space-x-4 rounded bg-black p-6 ring-4 ring-blue-200 ring-opacity-60'
                                 }
                             >
-                                <CloudUploadIcon className={'h-10 w-10 flex-shrink-0'} />
+                                <CloudArrowUpIcon className={'h-10 w-10 flex-shrink-0'} />
                                 <p className={'flex-1 text-center font-header text-lg text-neutral-100'}>
                                     Drag and drop files to upload.
                                 </p>

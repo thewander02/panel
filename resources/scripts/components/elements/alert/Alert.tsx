@@ -1,4 +1,4 @@
-import { ExclamationIcon, ShieldExclamationIcon } from '@heroicons/react/outline';
+import { ExclamationCircleIcon, ShieldExclamationIcon } from '@heroicons/react/24/outline';
 import * as React from 'react';
 import classNames from 'classnames';
 
@@ -23,7 +23,7 @@ export default ({ type, className, children }: AlertProps) => {
             {type === 'danger' ? (
                 <ShieldExclamationIcon className={'mr-2 h-6 w-6 text-red-400'} />
             ) : (
-                <ExclamationIcon className={'mr-2 h-6 w-6 text-yellow-500'} />
+                <ExclamationCircleIcon className={'mr-2 h-6 w-6 text-yellow-500'} />
             )}
             {children}
         </div>

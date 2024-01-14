@@ -1,4 +1,4 @@
-import { LockOpenIcon, PlusIcon, SupportIcon, TrashIcon } from '@heroicons/react/solid';
+import { LockOpenIcon, PlusIcon, LifebuoyIcon, TrashIcon } from '@heroicons/react/24/solid';
 import { Fragment, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -79,7 +79,7 @@ function UsersContainer() {
                             />
                         </div>
                         <Button.Text shape={Shape.IconSquare}>
-                            <SupportIcon className="h-4 w-4" />
+                            <LifebuoyIcon className="h-4 w-4" />
                         </Button.Text>
                         <Button.Text shape={Shape.IconSquare}>
                             <LockOpenIcon className="h-4 w-4" />
