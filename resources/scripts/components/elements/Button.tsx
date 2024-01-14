@@ -16,10 +16,10 @@ const ButtonStyle = styled.button<Omit<Props, 'isLoading'>>`
     ${props =>
         ((!props.isSecondary && !props.color) || props.color === 'primary') &&
         css<Props>`
-            ${props => !props.isSecondary && tw`bg-primary-500 border-primary-600 border text-primary-50`};
+            ${props => !props.isSecondary && tw`bg-blue-500 border-blue-600 border text-blue-50`};
 
             &:hover:not(:disabled) {
-                ${tw`bg-primary-600 border-primary-700`};
+                ${tw`bg-blue-600 border-blue-700`};
             }
         `};
 
@@ -82,7 +82,7 @@ const ButtonStyle = styled.button<Omit<Props, 'isLoading'>>`
             &:hover:not(:disabled) {
                 ${tw`border-neutral-500 text-zinc-100`};
                 ${props => props.color === 'red' && tw`bg-red-500 border-red-600 text-red-50`};
-                ${props => props.color === 'primary' && tw`bg-primary-500 border-primary-600 text-primary-50`};
+                ${props => props.color === 'primary' && tw`bg-blue-500 border-blue-600 text-blue-50`};
                 ${props => props.color === 'green' && tw`bg-green-500 border-green-600 text-green-50`};
             }
         `};

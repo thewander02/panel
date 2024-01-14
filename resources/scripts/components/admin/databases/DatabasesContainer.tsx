@@ -149,7 +149,7 @@ const DatabasesContainer = () => {
                                                 <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <NavLink
                                                         to={`/admin/databases/${database.id}`}
-                                                        css={tw`text-primary-400 hover:text-primary-300`}
+                                                        css={tw`text-blue-400 hover:text-blue-300`}
                                                     >
                                                         {database.name}
                                                     </NavLink>

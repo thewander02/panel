@@ -14,7 +14,7 @@ export const SubNavigation = styled.div`
 
         &:active,
         &.active {
-            ${tw`text-primary-300 border-primary-300`};
+            ${tw`text-blue-300 border-blue-300`};
         }
     }
 `;

@@ -2,6 +2,10 @@ import tw from 'twin.macro';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+    html, body {
+        ${tw`h-full w-full`};
+    }
+
     body {
         ${tw`font-jakarta bg-zinc-800 text-zinc-200`};
     }

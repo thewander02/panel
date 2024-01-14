@@ -10,9 +10,8 @@ module.exports = {
                 jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
             },
             colors: {
+                transparent: 'transparent',
                 black: '#000000',
-                primary: colors.blue,
-                cyan: colors.cyan,
             },
             transitionDuration: {
                 250: '250ms',
