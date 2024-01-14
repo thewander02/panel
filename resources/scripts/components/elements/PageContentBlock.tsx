@@ -22,10 +22,10 @@ function PageContentBlock({ title, showFlashKey, className, children }: PageCont
 
     return (
         <>
-            <ContentContainer css={tw`my-4 sm:my-10`} className={className}>
+            {/* <ContentContainer css={tw`my-4 sm:my-10`} className={className}> */}
                 {showFlashKey && <FlashMessageRender byKey={showFlashKey} css={tw`mb-4`} />}
                 {children}
-            </ContentContainer>
+            {/* </ContentContainer> */}
         </>
     );
 }

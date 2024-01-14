@@ -66,7 +66,7 @@ function App() {
             <StoreProvider store={store}>
                 <ProgressBar />
 
-                <div className="mx-auto w-auto">
+                <main data-pyro-app className="w-full h-full flex flex-row overflow-hidden p-4 gap-4">
                     <BrowserRouter>
                         <Routes>
                             <Route
@@ -116,7 +116,7 @@ function App() {
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </BrowserRouter>
-                </div>
+                </main>
             </StoreProvider>
         </>
     );

@@ -2,12 +2,20 @@ import tw from 'twin.macro';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+    * {
+        min-width: 0;
+    }
+
     html, body {
-        ${tw`h-full w-full`};
+        ${tw`h-full w-full overflow-hidden`};
     }
 
     body {
         ${tw`font-jakarta bg-zinc-800 text-zinc-200`};
+    }
+
+    #app {
+        ${tw`h-full w-full overflow-hidden`};
     }
 
     form {

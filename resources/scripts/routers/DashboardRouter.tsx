@@ -13,7 +13,7 @@ function DashboardRouter() {
 
     return (
         <>
-            <NavigationBar />
+            {/* <NavigationBar /> */}
 
             {location.pathname.startsWith('/account') && (
                 <SubNavigation>

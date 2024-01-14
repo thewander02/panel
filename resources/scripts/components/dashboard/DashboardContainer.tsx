@@ -49,38 +49,45 @@ export default () => {
     }, [error]);
 
     return (
-        <PageContentBlock title={'Dashboard'} showFlashKey={'dashboard'}>
-            {rootAdmin && (
-                <div css={tw`mb-2 flex justify-end items-center`}>
-                    <p css={tw`uppercase text-xs text-zinc-400 mr-2`}>
-                        {showOnlyAdmin ? "Showing others' servers" : 'Showing your servers'}
-                    </p>
-                    <Switch
-                        name={'show_all_servers'}
-                        defaultChecked={showOnlyAdmin}
-                        onChange={() => setShowOnlyAdmin(s => !s)}
-                    />
-                </div>
-            )}
-            {!servers ? (
-                <Spinner centered size={'large'} />
-            ) : (
-                <Pagination data={servers} onPageSelect={setPage}>
-                    {({ items }) =>
-                        items.length > 0 ? (
-                            items.map((server, index) => (
-                                <ServerRow key={server.uuid} server={server} css={index > 0 ? tw`mt-2` : undefined} />
-                            ))
-                        ) : (
-                            <p css={tw`text-center text-sm text-zinc-400`}>
-                                {showOnlyAdmin
-                                    ? 'There are no other servers to display.'
-                                    : 'There are no servers associated with your account.'}
-                            </p>
-                        )
-                    }
-                </Pagination>
-            )}
-        </PageContentBlock>
+        // <PageContentBlock title={'Dashboard'} showFlashKey={'dashboard'}>
+        <>
+            <div data-pyro-routelet style={{
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.045) 100%)',
+            }} className='p-6 h-full w-full overflow-y-auto rounded-xl'>
+                {rootAdmin && (
+                    <div css={tw`mb-2 flex justify-end items-center`}>
+                        <p css={tw`uppercase text-xs text-zinc-400 mr-2`}>
+                            {showOnlyAdmin ? "Showing others' servers" : 'Showing your servers'}
+                        </p>
+                        <Switch
+                            name={'show_all_servers'}
+                            defaultChecked={showOnlyAdmin}
+                            onChange={() => setShowOnlyAdmin(s => !s)}
+                        />
+                    </div>
+                )}
+                {!servers ? (
+                    <Spinner centered size={'large'} />
+                ) : (
+                    <Pagination data={servers} onPageSelect={setPage}>
+                        {({ items }) =>
+                            items.length > 0 ? (
+                                items.map((server, index) => (
+                                    <ServerRow key={server.uuid} server={server} css={index > 0 ? tw`mt-2` : undefined} />
+                                ))
+                            ) : (
+                                <p css={tw`text-center text-sm text-zinc-400`}>
+                                    {showOnlyAdmin
+                                        ? 'There are no other servers to display.'
+                                        : 'There are no servers associated with your account.'}
+                                </p>
+                            )
+                        }
+                    </Pagination>
+                )}
+            </div>
+        </>
+        // </PageContentBlock>
     );
 };
