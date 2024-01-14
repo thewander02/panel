@@ -107,8 +107,8 @@ export default () => {
             </ErrorBoundary>
 
             {filename === '.pteroignore' ? (
-                <div css={tw`mb-4 p-4 border-l-4 bg-neutral-900 rounded border-cyan-400`}>
-                    <p css={tw`text-neutral-300 text-sm`}>
+                <div css={tw`mb-4 p-4 border-l-4 bg-zinc-900 rounded border-cyan-400`}>
+                    <p css={tw`text-zinc-300 text-sm`}>
                         You&apos;re editing a <code css={tw`font-mono bg-black rounded py-px px-1`}>.pteroignore</code>{' '}
                         file. Any files or directories listed in here will be excluded from backups. Wildcards are
                         supported by using an asterisk (<code css={tw`font-mono bg-black rounded py-px px-1`}>*</code>).
@@ -152,7 +152,7 @@ export default () => {
             </div>
 
             <div css={tw`flex justify-end mt-4`}>
-                <div css={tw`flex-1 sm:flex-none rounded bg-neutral-900 mr-4`}>
+                <div css={tw`flex-1 sm:flex-none rounded bg-zinc-900 mr-4`}>
                     <Select
                         value={language?.name ?? ''}
                         onChange={e => {

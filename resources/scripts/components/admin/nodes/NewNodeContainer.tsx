@@ -68,8 +68,8 @@ export default () => {
         <AdminContentBlock title={'New Node'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>New Node</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>New Node</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         Add a new node to the panel.
                     </p>
                 </div>
@@ -110,7 +110,7 @@ export default () => {
                                     <NodeLimitContainer />
                                 </div>
 
-                                <div css={tw`rounded shadow-md bg-neutral-700 mt-4 py-2 pr-6`}>
+                                <div css={tw`rounded shadow-md bg-zinc-700 mt-4 py-2 pr-6`}>
                                     <div css={tw`flex flex-row`}>
                                         <Button type={'submit'} css={tw`ml-auto`} disabled={isSubmitting || !isValid}>
                                             Create

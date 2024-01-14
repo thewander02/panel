@@ -22,7 +22,7 @@ interface Values {
 }
 
 const ServerResult = styled(Link)`
-    ${tw`flex items-center bg-neutral-900 p-4 rounded border-l-4 border-neutral-900 no-underline transition-all duration-150`};
+    ${tw`flex items-center bg-zinc-900 p-4 rounded border-l-4 border-neutral-900 no-underline transition-all duration-150`};
 
     &:hover {
         ${tw`shadow border-cyan-500`};
@@ -108,7 +108,7 @@ export default ({ ...props }: Props) => {
                                 >
                                     <div css={tw`flex-1 mr-4`}>
                                         <p css={tw`text-sm`}>{server.name}</p>
-                                        <p css={tw`mt-1 text-xs text-neutral-400`}>
+                                        <p css={tw`mt-1 text-xs text-zinc-400`}>
                                             {server.allocations
                                                 .filter(alloc => alloc.isDefault)
                                                 .map(allocation => (

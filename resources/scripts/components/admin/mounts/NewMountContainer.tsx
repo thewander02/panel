@@ -36,8 +36,8 @@ export default () => {
         <AdminContentBlock title={'New Mount'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>New Mount</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>New Mount</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         Add a new mount to the panel.
                     </p>
                 </div>

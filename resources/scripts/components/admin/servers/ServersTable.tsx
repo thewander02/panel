@@ -127,14 +127,14 @@ function ServersTable({ filters }: Props) {
                                     !isValidating &&
                                     length > 0 &&
                                     servers.items.map(server => (
-                                        <tr key={server.id} css={tw`h-14 hover:bg-neutral-600`}>
+                                        <tr key={server.id} css={tw`h-14 hover:bg-zinc-600`}>
                                             <td css={tw`pl-6`}>
                                                 <RowCheckbox id={server.id} />
                                             </td>
 
-                                            <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                            <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                 <CopyOnClick text={server.identifier}>
-                                                    <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                    <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                         {server.identifier}
                                                     </code>
                                                 </CopyOnClick>
@@ -155,11 +155,11 @@ function ServersTable({ filters }: Props) {
                                                     to={`/admin/users/${server.relations.user?.id}`}
                                                     css={tw`text-primary-400 hover:text-primary-300`}
                                                 >
-                                                    <div css={tw`text-sm text-neutral-200`}>
+                                                    <div css={tw`text-sm text-zinc-200`}>
                                                         {server.relations.user?.email}
                                                     </div>
 
-                                                    <div css={tw`text-sm text-neutral-400`}>
+                                                    <div css={tw`text-sm text-zinc-400`}>
                                                         {server.relations.user?.uuid.split('-')[0]}
                                                     </div>
                                                 </NavLink>
@@ -171,11 +171,11 @@ function ServersTable({ filters }: Props) {
                                                     to={`/admin/nodes/${server.relations.node?.id}`}
                                                     css={tw`text-primary-400 hover:text-primary-300`}
                                                 >
-                                                    <div css={tw`text-sm text-neutral-200`}>
+                                                    <div css={tw`text-sm text-zinc-200`}>
                                                         {server.relations.node?.name}
                                                     </div>
 
-                                                    <div css={tw`text-sm text-neutral-400`}>
+                                                    <div css={tw`text-sm text-zinc-400`}>
                                                         {server.relations.node?.fqdn}
                                                     </div>
                                                 </NavLink>

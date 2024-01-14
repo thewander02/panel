@@ -122,7 +122,7 @@ export default function UserForm({ title, initialValues, children, onSubmit, uui
 
                             {/* TODO: Remove toggle once role permissions are implemented. */}
                             <div css={tw`w-full flex flex-row mb-6`}>
-                                <div css={tw`w-full bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
+                                <div css={tw`w-full bg-zinc-800 border border-neutral-900 shadow-inner p-4 rounded`}>
                                     <FormikSwitch
                                         name={'rootAdmin'}
                                         label={'Root Admin'}

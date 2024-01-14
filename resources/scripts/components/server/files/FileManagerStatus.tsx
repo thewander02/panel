@@ -42,7 +42,7 @@ const FileUploadList = () => {
     return (
         <div className={'mt-6 space-y-2'}>
             {uploads.map(([name, file]) => (
-                <div key={name} className={'flex items-center space-x-3 rounded bg-slate-700 p-3'}>
+                <div key={name} className={'flex items-center space-x-3 rounded bg-zinc-700 p-3'}>
                     <Tooltip content={`${Math.floor((file.loaded / file.total) * 100)}%`} placement={'left'}>
                         <div className={'flex-shrink-0'}>
                             <Spinner progress={(file.loaded / file.total) * 100} className={'h-6 w-6'} />
@@ -51,7 +51,7 @@ const FileUploadList = () => {
                     <Code className={'flex-1 truncate'}>{name}</Code>
                     <button
                         onClick={cancelFileUpload.bind(this, name)}
-                        className={'text-slate-500 transition-colors duration-75 hover:text-slate-200'}
+                        className={'text-zinc-500 transition-colors duration-75 hover:text-zinc-200'}
                     >
                         <XMarkIcon className={'h-5 w-5'} />
                     </button>

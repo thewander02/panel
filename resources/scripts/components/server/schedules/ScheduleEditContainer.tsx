@@ -19,9 +19,9 @@ import ScheduleCronRow from '@/components/server/schedules/ScheduleCronRow';
 import RunScheduleButton from '@/components/server/schedules/RunScheduleButton';
 
 const CronBox = ({ title, value }: { title: string; value: string }) => (
-    <div css={tw`bg-neutral-700 rounded p-3`}>
-        <p css={tw`text-neutral-300 text-sm`}>{title}</p>
-        <p css={tw`text-xl font-medium text-neutral-100`}>{value}</p>
+    <div css={tw`bg-zinc-700 rounded p-3`}>
+        <p css={tw`text-zinc-300 text-sm`}>{title}</p>
+        <p css={tw`text-xl font-medium text-zinc-100`}>{value}</p>
     </div>
 );
 
@@ -80,17 +80,17 @@ export default () => {
                 <Spinner size={'large'} centered />
             ) : (
                 <>
-                    <ScheduleCronRow cron={schedule.cron} css={tw`sm:hidden bg-neutral-700 rounded mb-4 p-3`} />
+                    <ScheduleCronRow cron={schedule.cron} css={tw`sm:hidden bg-zinc-700 rounded mb-4 p-3`} />
                     <div css={tw`rounded shadow`}>
                         <div
-                            css={tw`sm:flex items-center bg-neutral-900 p-3 sm:p-6 border-b-4 border-neutral-600 rounded-t`}
+                            css={tw`sm:flex items-center bg-zinc-900 p-3 sm:p-6 border-b-4 border-neutral-600 rounded-t`}
                         >
                             <div css={tw`flex-1`}>
-                                <h3 css={tw`flex items-center text-neutral-100 text-2xl`}>
+                                <h3 css={tw`flex items-center text-zinc-100 text-2xl`}>
                                     {schedule.name}
                                     {schedule.isProcessing ? (
                                         <span
-                                            css={tw`flex items-center rounded-full px-2 py-px text-xs ml-4 uppercase bg-neutral-600 text-white`}
+                                            css={tw`flex items-center rounded-full px-2 py-px text-xs ml-4 uppercase bg-zinc-600 text-white`}
                                         >
                                             <Spinner css={tw`w-3! h-3! mr-2`} />
                                             Processing
@@ -99,19 +99,19 @@ export default () => {
                                         <ActivePill active={schedule.isActive} />
                                     )}
                                 </h3>
-                                <p css={tw`mt-1 text-sm text-neutral-200`}>
+                                <p css={tw`mt-1 text-sm text-zinc-200`}>
                                     Last run at:&nbsp;
                                     {schedule.lastRunAt ? (
                                         format(schedule.lastRunAt, "MMM do 'at' h:mma")
                                     ) : (
-                                        <span css={tw`text-neutral-300`}>n/a</span>
+                                        <span css={tw`text-zinc-300`}>n/a</span>
                                     )}
                                     <span css={tw`ml-4 pl-4 border-l-4 border-neutral-600 py-px`}>
                                         Next run at:&nbsp;
                                         {schedule.nextRunAt ? (
                                             format(schedule.nextRunAt, "MMM do 'at' h:mma")
                                         ) : (
-                                            <span css={tw`text-neutral-300`}>n/a</span>
+                                            <span css={tw`text-zinc-300`}>n/a</span>
                                         )}
                                     </span>
                                 </p>
@@ -132,7 +132,7 @@ export default () => {
                             <CronBox title={'Month'} value={schedule.cron.month} />
                             <CronBox title={'Day (Week)'} value={schedule.cron.dayOfWeek} />
                         </div>
-                        <div css={tw`bg-neutral-700 rounded-b`}>
+                        <div css={tw`bg-zinc-700 rounded-b`}>
                             {schedule.tasks.length > 0
                                 ? schedule.tasks
                                       .sort((a, b) =>

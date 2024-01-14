@@ -64,7 +64,7 @@ function AdminRouter() {
                     onClick={() => setCollapsed(!collapsed)}
                 >
                     {!collapsed ? (
-                        <h1 css={tw`text-2xl text-neutral-50 whitespace-nowrap font-medium`}>{applicationName}</h1>
+                        <h1 css={tw`text-2xl text-zinc-50 whitespace-nowrap font-medium`}>{applicationName}</h1>
                     ) : (
                         <img src={CollapsedIcon} css={tw`mt-4 w-20`} alt={'Pterodactyl Icon'} />
                     )}
@@ -128,12 +128,12 @@ function AdminRouter() {
                     )}
                     <div css={tw`flex flex-col ml-3`}>
                         <span
-                            css={tw`font-sans font-normal text-sm text-neutral-50 whitespace-nowrap leading-tight select-none`}
+                            css={tw` font-normal text-sm text-zinc-50 whitespace-nowrap leading-tight select-none`}
                         >
                             {email}
                         </span>
                         <span
-                            css={tw`font-header font-normal text-xs text-neutral-300 whitespace-nowrap leading-tight select-none`}
+                            css={tw`font-jakarta font-normal text-xs text-zinc-300 whitespace-nowrap leading-tight select-none`}
                         >
                             {roleName}
                         </span>

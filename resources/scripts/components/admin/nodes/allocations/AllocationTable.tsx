@@ -123,23 +123,23 @@ function AllocationsTable({ nodeId, filters }: Props) {
                                     !isValidating &&
                                     length > 0 &&
                                     allocations.items.map(allocation => (
-                                        <tr key={allocation.id} css={tw`h-10 hover:bg-neutral-600`}>
+                                        <tr key={allocation.id} css={tw`h-10 hover:bg-zinc-600`}>
                                             <td css={tw`pl-6`}>
                                                 <RowCheckbox id={allocation.id} />
                                             </td>
 
-                                            <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                            <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                 <CopyOnClick text={allocation.ip}>
-                                                    <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                    <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                         {allocation.ip}
                                                     </code>
                                                 </CopyOnClick>
                                             </td>
 
                                             {allocation.alias !== null ? (
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={allocation.alias}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {allocation.alias}
                                                         </code>
                                                     </CopyOnClick>
@@ -148,16 +148,16 @@ function AllocationsTable({ nodeId, filters }: Props) {
                                                 <td />
                                             )}
 
-                                            <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                            <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                 <CopyOnClick text={allocation.port}>
-                                                    <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                    <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                         {allocation.port}
                                                     </code>
                                                 </CopyOnClick>
                                             </td>
 
                                             {allocation.relations.server !== undefined ? (
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <NavLink
                                                         to={`/admin/servers/${allocation.serverId}`}
                                                         css={tw`text-primary-400 hover:text-primary-300`}

@@ -35,7 +35,7 @@ function ServerConsoleContainer() {
             )}
             <div className={'mb-4 grid grid-cols-4 gap-4'}>
                 <div className={'hidden pr-4 sm:col-span-2 sm:block lg:col-span-3'}>
-                    <h1 className={'font-header text-2xl leading-relaxed text-slate-50 line-clamp-1'}>{name}</h1>
+                    <h1 className={'font-jakarta text-2xl leading-relaxed text-zinc-50 line-clamp-1'}>{name}</h1>
                     <p className={'text-sm line-clamp-2'}>{description}</p>
                 </div>
                 <div className={'col-span-4 self-end sm:col-span-2 lg:col-span-1'}>

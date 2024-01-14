@@ -13,7 +13,7 @@ import type { ApplicationStore } from '@/state';
 
 const Code = ({ className, children }: { className?: string; children: ReactNode }) => {
     return (
-        <code css={tw`text-sm font-mono bg-neutral-900 rounded`} style={{ padding: '2px 6px' }} className={className}>
+        <code css={tw`text-sm font-mono bg-zinc-900 rounded`} style={{ padding: '2px 6px' }} className={className}>
             {children}
         </code>
     );

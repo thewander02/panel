@@ -86,8 +86,8 @@ const RolesContainer = () => {
         <AdminContentBlock title={'Roles'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Roles</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>Roles</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         Soon&trade;
                     </p>
                 </div>
@@ -133,15 +133,15 @@ const RolesContainer = () => {
                                                     <RowCheckbox id={role.id} />
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={role.id.toString()}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {role.id}
                                                         </code>
                                                     </CopyOnClick>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <NavLink
                                                         to={`/admin/roles/${role.id}`}
                                                         css={tw`text-primary-400 hover:text-primary-300`}
@@ -150,7 +150,7 @@ const RolesContainer = () => {
                                                     </NavLink>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     {role.description}
                                                 </td>
                                             </TableRow>

@@ -45,14 +45,14 @@ export const TableHeader = ({
         <th css={tw`px-6 py-2`} onClick={onClick}>
             <span css={tw`flex flex-row items-center cursor-pointer`}>
                 <span
-                    css={tw`text-xs font-medium tracking-wider uppercase text-neutral-300 whitespace-nowrap select-none`}
+                    css={tw`text-xs font-medium tracking-wider uppercase text-zinc-300 whitespace-nowrap select-none`}
                 >
                     {name}
                 </span>
 
                 {direction !== undefined ? (
                     <div css={tw`ml-1`}>
-                        <svg fill="none" viewBox="0 0 20 20" css={tw`w-4 h-4 text-neutral-400`}>
+                        <svg fill="none" viewBox="0 0 20 20" css={tw`w-4 h-4 text-zinc-400`}>
                             {direction === null || direction === 1 ? (
                                 <path
                                     stroke="currentColor"
@@ -81,7 +81,7 @@ export const TableHeader = ({
 
 export const TableHead = ({ children }: { children: ReactNode }) => {
     return (
-        <thead css={tw`bg-neutral-900 border-t border-b border-neutral-500`}>
+        <thead css={tw`bg-zinc-900 border-t border-b border-neutral-500`}>
             <tr>
                 <TableHeader />
                 {children}
@@ -95,7 +95,7 @@ export const TableBody = ({ children }: { children: ReactNode }) => {
 };
 
 export const TableRow = ({ children }: { children: ReactNode }) => {
-    return <tr css={tw`h-12 hover:bg-neutral-600`}>{children}</tr>;
+    return <tr css={tw`h-12 hover:bg-zinc-600`}>{children}</tr>;
 };
 
 interface Props<T> {
@@ -109,18 +109,18 @@ const PaginationButton = styled.button<{ active?: boolean }>`
     ${tw`relative items-center px-3 py-1 -ml-px text-sm font-normal leading-5 transition duration-150 ease-in-out border border-neutral-500 focus:z-10 focus:outline-none focus:border-primary-300 inline-flex`};
 
     ${props =>
-        props.active ? tw`bg-neutral-500 text-neutral-50` : tw`bg-neutral-600 text-neutral-200 hover:text-neutral-50`};
+        props.active ? tw`bg-zinc-500 text-zinc-50` : tw`bg-zinc-600 text-zinc-200 hover:text-zinc-50`};
 `;
 
 const PaginationArrow = styled.button`
-    ${tw`relative inline-flex items-center px-1 py-1 text-sm font-medium leading-5 transition duration-150 ease-in-out border border-neutral-500 bg-neutral-600 text-neutral-400 hover:text-neutral-50 focus:z-10 focus:outline-none focus:border-primary-300`};
+    ${tw`relative inline-flex items-center px-1 py-1 text-sm font-medium leading-5 transition duration-150 ease-in-out border border-neutral-500 bg-zinc-600 text-zinc-400 hover:text-zinc-50 focus:z-10 focus:outline-none focus:border-primary-300`};
 
     &:disabled {
-        ${tw`bg-neutral-700`}
+        ${tw`bg-zinc-700`}
     }
 
     &:hover:disabled {
-        ${tw`text-neutral-400 cursor-default`};
+        ${tw`text-zinc-400 cursor-default`};
     }
 `;
 
@@ -178,16 +178,16 @@ export function Pagination<T>({ data, onPageSelect, children }: Props<T>) {
             {children}
 
             <div css={tw`h-12 flex flex-row items-center w-full px-6 py-3 border-t border-neutral-500`}>
-                <p css={tw`text-sm leading-5 text-neutral-400`}>
+                <p css={tw`text-sm leading-5 text-zinc-400`}>
                     Showing{' '}
-                    <span css={tw`text-neutral-300`}>
+                    <span css={tw`text-zinc-300`}>
                         {(pagination.currentPage - 1) * pagination.perPage + (pagination.total > 0 ? 1 : 0)}
                     </span>{' '}
                     to{' '}
-                    <span css={tw`text-neutral-300`}>
+                    <span css={tw`text-zinc-300`}>
                         {(pagination.currentPage - 1) * pagination.perPage + pagination.count}
                     </span>{' '}
-                    of <span css={tw`text-neutral-300`}>{pagination.total}</span> results
+                    of <span css={tw`text-zinc-300`}>{pagination.total}</span> results
                 </p>
 
                 {isFirstPage && isLastPage ? null : (
@@ -268,7 +268,7 @@ export const NoItems = ({ className }: { className?: string }) => {
                 <img src={'/assets/svgs/not_found.svg'} alt={'No Items'} css={tw`h-full select-none`} />
             </div>
 
-            <p css={tw`text-lg text-neutral-300 text-center font-normal sm:mt-8`}>
+            <p css={tw`text-lg text-zinc-300 text-center font-normal sm:mt-8`}>
                 No items could be found, it&apos;s almost like they are hiding.
             </p>
         </div>
@@ -309,7 +309,7 @@ export const ContentWrapper = ({ checked, onSelectAllClick, onSearch, children }
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"
-                        css={tw`w-4 h-4 ml-1 text-neutral-200`}
+                        css={tw`w-4 h-4 ml-1 text-zinc-200`}
                     >
                         <path
                             clipRule="evenodd"
@@ -342,7 +342,7 @@ export const ContentWrapper = ({ checked, onSelectAllClick, onSearch, children }
 export default ({ children }: { children: ReactNode }) => {
     return (
         <div css={tw`flex flex-col w-full`}>
-            <div css={tw`rounded-lg shadow-md bg-neutral-700`}>{children}</div>
+            <div css={tw`rounded-lg shadow-md bg-zinc-700`}>{children}</div>
         </div>
     );
 };

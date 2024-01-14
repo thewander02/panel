@@ -48,9 +48,9 @@ export default () => {
             {!data && isValidating ? (
                 <Spinner centered />
             ) : !data?.items.length ? (
-                <p className={'text-center text-sm text-slate-400'}>No activity logs available for this server.</p>
+                <p className={'text-center text-sm text-zinc-400'}>No activity logs available for this server.</p>
             ) : (
-                <div className={'bg-slate-700'}>
+                <div className={'bg-zinc-700'}>
                     {data?.items.map(activity => (
                         <ActivityLogEntry key={activity.id} activity={activity}>
                             <span />

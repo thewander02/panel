@@ -56,7 +56,7 @@ function LoginCheckpointContainer() {
                         setFieldValue('recoveryCode', '');
                         setIsMissingDevice(s => !s);
                     }}
-                    css={tw`cursor-pointer text-xs text-neutral-500 tracking-wide uppercase no-underline hover:text-neutral-700`}
+                    css={tw`cursor-pointer text-xs text-zinc-500 tracking-wide uppercase no-underline hover:text-zinc-700`}
                 >
                     {!isMissingDevice ? "I've Lost My Device" : 'I Have My Device'}
                 </span>
@@ -64,7 +64,7 @@ function LoginCheckpointContainer() {
             <div css={tw`mt-6 text-center`}>
                 <Link
                     to={'/auth/login'}
-                    css={tw`text-xs text-neutral-500 tracking-wide uppercase no-underline hover:text-neutral-700`}
+                    css={tw`text-xs text-zinc-500 tracking-wide uppercase no-underline hover:text-zinc-700`}
                 >
                     Return to Login
                 </Link>

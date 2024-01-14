@@ -86,8 +86,8 @@ const NodesContainer = () => {
         <AdminContentBlock title={'Nodes'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Nodes</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>Nodes</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         All nodes available on the system.
                     </p>
                 </div>
@@ -158,15 +158,15 @@ const NodesContainer = () => {
                                                     <RowCheckbox id={node.id} />
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={node.id.toString()}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {node.id}
                                                         </code>
                                                     </CopyOnClick>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <NavLink
                                                         to={`/admin/nodes/${node.id}`}
                                                         css={tw`text-primary-400 hover:text-primary-300`}
@@ -181,28 +181,28 @@ const NodesContainer = () => {
                                                         to={`/admin/locations/${node.relations.location?.id}`}
                                                         css={tw`text-primary-400 hover:text-primary-300`}
                                                     >
-                                                        <div css={tw`text-sm text-neutral-200`}>
+                                                        <div css={tw`text-sm text-zinc-200`}>
                                                             {node.relations.location?.short}
                                                         </div>
 
-                                                        <div css={tw`text-sm text-neutral-400`}>
+                                                        <div css={tw`text-sm text-zinc-400`}>
                                                             {node.relations.location?.long}
                                                         </div>
                                                     </NavLink>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={node.fqdn}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {node.fqdn}
                                                         </code>
                                                     </CopyOnClick>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     {bytesToString(mbToBytes(node.memory))}
                                                 </td>
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     {bytesToString(mbToBytes(node.disk))}
                                                 </td>
 

@@ -41,7 +41,7 @@ function UserTableRow({ user, selected, onRowChange }: Props) {
                         </div>
                         <div className={'ml-4'}>
                             <p className={'font-medium'}>{user.email}</p>
-                            <p className={'text-sm text-neutral-400'}>{user.uuid}</p>
+                            <p className={'text-sm text-zinc-400'}>{user.uuid}</p>
                         </div>
                     </div>
                 </td>

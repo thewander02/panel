@@ -28,7 +28,7 @@ export default () => {
                     <Button size={'large'} color={'red'} css={tw`w-full`}>
                         Reinstall Server
                     </Button>
-                    <p css={tw`text-xs text-neutral-400 mt-2`}>
+                    <p css={tw`text-xs text-zinc-400 mt-2`}>
                         This will reinstall the server with the assigned service scripts.
                     </p>
                 </AdminBox>
@@ -38,7 +38,7 @@ export default () => {
                     <Button size={'large'} color={'primary'} css={tw`w-full`}>
                         Set Server as Installing
                     </Button>
-                    <p css={tw`text-xs text-neutral-400 mt-2`}>
+                    <p css={tw`text-xs text-zinc-400 mt-2`}>
                         If you need to change the install status from uninstalled to installed, or vice versa, you may
                         do so with the button below.
                     </p>
@@ -49,7 +49,7 @@ export default () => {
                     <Button size={'large'} color={'primary'} css={tw`w-full`}>
                         Suspend Server
                     </Button>
-                    <p css={tw`text-xs text-neutral-400 mt-2`}>
+                    <p css={tw`text-xs text-zinc-400 mt-2`}>
                         This will suspend the server, stop any running processes, and immediately block the user from
                         being able to access their files or otherwise manage the server through the panel or API.
                     </p>

@@ -43,7 +43,7 @@ function ScheduleContainer() {
             ) : (
                 <>
                     {schedules.length === 0 ? (
-                        <p css={tw`text-sm text-center text-neutral-300`}>
+                        <p css={tw`text-sm text-center text-zinc-300`}>
                             There are no schedules configured for this server.
                         </p>
                     ) : (

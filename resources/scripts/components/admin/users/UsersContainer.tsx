@@ -51,7 +51,7 @@ function UsersContainer() {
                 </NavLink>
             </div>
 
-            <div className="relative flex items-center rounded-t bg-neutral-700 px-4 py-2">
+            <div className="relative flex items-center rounded-t bg-zinc-700 px-4 py-2">
                 <div className="mr-6">
                     <Checkbox
                         checked={selectAllChecked}
@@ -70,7 +70,7 @@ function UsersContainer() {
                     />
                 </div>
                 <Transition.Fade as={Fragment} show={selected.length > 0} duration="duration-75">
-                    <div className="absolute top-0 left-0 flex h-full w-full items-center justify-end space-x-4 rounded-t bg-neutral-700 px-4">
+                    <div className="absolute top-0 left-0 flex h-full w-full items-center justify-end space-x-4 rounded-t bg-zinc-700 px-4">
                         <div className="flex-1">
                             <Checkbox
                                 checked={selectAllChecked}
@@ -90,8 +90,8 @@ function UsersContainer() {
                     </div>
                 </Transition.Fade>
             </div>
-            <table className="min-w-full rounded bg-neutral-700">
-                <thead className="bg-neutral-900">
+            <table className="min-w-full rounded bg-zinc-700">
+                <thead className="bg-zinc-900">
                     <tr>
                         <th scope="col" className="w-8" />
                         <th scope="col" className="w-full px-6 py-2 text-left">

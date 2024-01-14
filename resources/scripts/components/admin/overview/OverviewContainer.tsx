@@ -11,7 +11,7 @@ import useFlash from '@/plugins/useFlash';
 
 const Code = ({ children }: { children: ReactNode }) => {
     return (
-        <code css={tw`text-sm font-mono bg-neutral-900 rounded`} style={{ padding: '2px 6px' }}>
+        <code css={tw`text-sm font-mono bg-zinc-900 rounded`} style={{ padding: '2px 6px' }}>
             {children}
         </code>
     );
@@ -38,8 +38,8 @@ export default () => {
         <AdminContentBlock title={'Overview'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Overview</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>Overview</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         A quick glance at your system.
                     </p>
                 </div>
@@ -47,14 +47,14 @@ export default () => {
 
             <FlashMessageRender byKey={'overview'} css={tw`mb-4`} />
 
-            <div css={tw`flex flex-col w-full rounded-lg shadow-md bg-neutral-700`}>
+            <div css={tw`flex flex-col w-full rounded-lg shadow-md bg-zinc-700`}>
                 {loading ? (
                     <div css={tw`w-full flex flex-col items-center justify-center`} style={{ height: '16rem' }}>
                         <Spinner size={'base'} />
                     </div>
                 ) : (
-                    <div css={tw`rounded shadow-md bg-neutral-700`}>
-                        <div css={tw`bg-neutral-900 rounded-t border-b border-black px-4 py-3`}>
+                    <div css={tw`rounded shadow-md bg-zinc-700`}>
+                        <div css={tw`bg-zinc-900 rounded-t border-b border-black px-4 py-3`}>
                             <p css={tw`text-sm uppercase`}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -77,19 +77,19 @@ export default () => {
 
                         <div css={tw`px-4 py-4`}>
                             {versionData?.panel.current === 'canary' ? (
-                                <p css={tw`text-neutral-200`}>
+                                <p css={tw`text-zinc-200`}>
                                     I hope you enjoy living on the edge because you are running a{' '}
                                     <Code>{versionData?.panel.current}</Code> version of Pterodactyl.
                                 </p>
                             ) : versionData?.panel.latest === versionData?.panel.current ? (
-                                <p css={tw`text-neutral-200`}>
-                                    Your panel is <span css={tw`text-neutral-100`}>up-to-date</span>. The latest version
+                                <p css={tw`text-zinc-200`}>
+                                    Your panel is <span css={tw`text-zinc-100`}>up-to-date</span>. The latest version
                                     is <Code>{versionData?.panel.latest}</Code> and you are running version{' '}
                                     <Code>{versionData?.panel.current}</Code>.
                                 </p>
                             ) : (
-                                <p css={tw`text-neutral-200`}>
-                                    Your panel is <span css={tw`text-neutral-100`}>not up-to-date</span>. The latest
+                                <p css={tw`text-zinc-200`}>
+                                    Your panel is <span css={tw`text-zinc-100`}>not up-to-date</span>. The latest
                                     version is <Code>{versionData?.panel.latest}</Code> and you are running version{' '}
                                     <Code>{versionData?.panel.current}</Code>.
                                 </p>

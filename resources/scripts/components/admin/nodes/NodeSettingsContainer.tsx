@@ -49,12 +49,12 @@ export default function NodeSettingsContainer({ node }: { node?: Node }) {
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'scheme'} type={'radio'} value={'https'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Enabled</span>
+                        <span css={tw`text-zinc-300 ml-2`}>Enabled</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'scheme'} type={'radio'} value={'http'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Disabled</span>
+                        <span css={tw`text-zinc-300 ml-2`}>Disabled</span>
                     </label>
                 </div>
             </div>
@@ -65,12 +65,12 @@ export default function NodeSettingsContainer({ node }: { node?: Node }) {
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'behindProxy'} type={'radio'} value={'false'} />
-                        <span css={tw`text-neutral-300 ml-2`}>No</span>
+                        <span css={tw`text-zinc-300 ml-2`}>No</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'behindProxy'} type={'radio'} value={'true'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Yes</span>
+                        <span css={tw`text-zinc-300 ml-2`}>Yes</span>
                     </label>
                 </div>
             </div>
@@ -81,12 +81,12 @@ export default function NodeSettingsContainer({ node }: { node?: Node }) {
                 <div>
                     <label css={tw`inline-flex items-center mr-2`}>
                         <FormikField name={'public'} type={'radio'} value={'false'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Disabled</span>
+                        <span css={tw`text-zinc-300 ml-2`}>Disabled</span>
                     </label>
 
                     <label css={tw`inline-flex items-center ml-2`}>
                         <FormikField name={'public'} type={'radio'} value={'true'} />
-                        <span css={tw`text-neutral-300 ml-2`}>Enabled</span>
+                        <span css={tw`text-zinc-300 ml-2`}>Enabled</span>
                     </label>
                 </div>
             </div>

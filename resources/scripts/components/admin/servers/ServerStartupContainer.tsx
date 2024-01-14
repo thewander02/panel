@@ -88,7 +88,7 @@ export function ServerServiceContainer({
             <div className="mb-6">
                 <EggSelect nestId={nestId} selectedEggId={selectedEggId} onEggSelect={setEgg} />
             </div>
-            <div className="bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded">
+            <div className="bg-zinc-800 border border-neutral-900 shadow-inner p-4 rounded">
                 <FormikSwitch name={'skipScripts'} label={'Skip Egg Install Script'} description={'Soon™'} />
             </div>
         </AdminBox>
@@ -194,7 +194,7 @@ function ServerStartupForm({
                         ))}
                 </div>
 
-                <div className="bg-neutral-700 rounded shadow-md py-2 pr-6 mt-6">
+                <div className="bg-zinc-700 rounded shadow-md py-2 pr-6 mt-6">
                     <div className="flex flex-row">
                         <Button type="submit" size="small" className="ml-auto" disabled={isSubmitting || !isValid}>
                             Save Changes

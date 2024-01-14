@@ -45,7 +45,7 @@ export default ({ className }: { className?: string }) => {
             >
                 <FlashMessageRender byKey={'egg:import'} css={tw`mb-6`} />
 
-                <h2 css={tw`mb-6 text-2xl text-neutral-100`}>Import Egg</h2>
+                <h2 css={tw`mb-6 text-2xl text-zinc-100`}>Import Egg</h2>
 
                 <Editor
                     childClassName={tw`h-64 rounded`}

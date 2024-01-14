@@ -7,18 +7,18 @@ export interface Props {
 }
 
 const light = css<Props>`
-    ${tw`bg-white border-neutral-200 text-neutral-800`};
+    ${tw`bg-white border-neutral-200 text-zinc-800`};
     &:focus {
         ${tw`border-primary-400`}
     }
 
     &:disabled {
-        ${tw`bg-neutral-100 border-neutral-200`};
+        ${tw`bg-zinc-100 border-neutral-200`};
     }
 `;
 
 const checkboxStyle = css<Props>`
-    ${tw`bg-neutral-500 cursor-pointer appearance-none inline-block align-middle select-none flex-shrink-0 w-4 h-4 text-primary-400 border border-neutral-300 rounded-sm`};
+    ${tw`bg-zinc-500 cursor-pointer appearance-none inline-block align-middle select-none flex-shrink-0 w-4 h-4 text-primary-400 border border-neutral-300 rounded-sm`};
     color-adjust: exact;
     background-origin: border-box;
     transition: all 75ms linear, box-shadow 25ms linear;
@@ -41,11 +41,11 @@ const inputStyle = css<Props>`
     resize: none;
     ${tw`appearance-none outline-none w-full min-w-0`};
     ${tw`py-2.5 px-3 border-2 rounded text-sm transition-all duration-150`};
-    ${tw`bg-neutral-600 border-neutral-500 hover:border-neutral-400 text-neutral-200 shadow-none focus:ring-0`};
+    ${tw`bg-zinc-600 border-neutral-500 hover:border-neutral-400 text-zinc-200 shadow-none focus:ring-0`};
 
     & + .input-help {
         ${tw`mt-1 text-xs`};
-        ${props => (props.hasError ? tw`text-red-200` : tw`text-neutral-200`)};
+        ${props => (props.hasError ? tw`text-red-200` : tw`text-zinc-200`)};
     }
 
     &:required,
@@ -67,7 +67,7 @@ const inputStyle = css<Props>`
             ? light
             : css`
                   &:not(.ignoreReadOnly):read-only {
-                      ${tw`border-neutral-800 bg-neutral-900`};
+                      ${tw`border-neutral-800 bg-zinc-900`};
                   }
               `};
     ${props => props.hasError && tw`text-red-100 border-red-400 hover:border-red-300`};

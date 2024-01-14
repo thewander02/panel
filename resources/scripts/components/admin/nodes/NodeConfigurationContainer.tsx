@@ -45,7 +45,7 @@ export default () => {
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
-                                css={tw`h-5 w-5 text-neutral-500 hover:text-neutral-400 cursor-pointer mt-1 mr-1`}
+                                css={tw`h-5 w-5 text-zinc-500 hover:text-zinc-400 cursor-pointer mt-1 mr-1`}
                             >
                                 <path
                                     strokeLinecap="round"
@@ -56,7 +56,7 @@ export default () => {
                             </svg>
                         </CopyOnClick>
                     </div>
-                    <pre css={tw`text-sm rounded font-mono bg-neutral-900 shadow-md px-4 py-3 overflow-x-auto`}>
+                    <pre css={tw`text-sm rounded font-mono bg-zinc-900 shadow-md px-4 py-3 overflow-x-auto`}>
                         {configuration}
                     </pre>
                 </div>

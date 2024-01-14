@@ -6,16 +6,16 @@ const TFootPaginated = ({ pagination, span }: { span: number; pagination: Pagina
 
     return (
         <tfoot>
-            <tr className={'bg-neutral-800'}>
+            <tr className={'bg-zinc-800'}>
                 <td scope={'col'} colSpan={span} className={'px-4 py-2'}>
-                    <p className={'text-sm text-neutral-500'}>
+                    <p className={'text-sm text-zinc-500'}>
                         Showing{' '}
-                        <span className={'font-semibold text-neutral-400'}>
+                        <span className={'font-semibold text-zinc-400'}>
                             {Math.max(start, Math.min(pagination.total, 1))}
                         </span>{' '}
                         to&nbsp;
-                        <span className={'font-semibold text-neutral-400'}>{end}</span> of&nbsp;
-                        <span className={'font-semibold text-neutral-400'}>{pagination.total}</span> results.
+                        <span className={'font-semibold text-zinc-400'}>{end}</span> of&nbsp;
+                        <span className={'font-semibold text-zinc-400'}>{pagination.total}</span> results.
                     </p>
                 </td>
             </tr>

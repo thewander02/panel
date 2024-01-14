@@ -118,7 +118,7 @@ function EggVariableDeleteButton({ onClick }: { onClick: (success: () => void) =
 
             <button
                 type={'button'}
-                css={tw`ml-auto text-neutral-500 hover:text-neutral-300`}
+                css={tw`ml-auto text-zinc-500 hover:text-zinc-300`}
                 onClick={() => setVisible(true)}
             >
                 <TrashIcon className="h-5 w-5" />
@@ -177,7 +177,7 @@ export default function EggVariablesContainer() {
                 <Form>
                     <div css={tw`flex flex-col mb-16`}>
                         {egg.relationships.variables?.length === 0 ? (
-                            <NoItems css={tw`bg-neutral-700 rounded-md shadow-md`} />
+                            <NoItems css={tw`bg-zinc-700 rounded-md shadow-md`} />
                         ) : (
                             <div css={tw`grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-6`}>
                                 {egg.relationships.variables.map((v, i) => (
@@ -206,7 +206,7 @@ export default function EggVariablesContainer() {
                             </div>
                         )}
 
-                        <div css={tw`bg-neutral-700 rounded shadow-md py-2 px-4 mt-6`}>
+                        <div css={tw`bg-zinc-700 rounded shadow-md py-2 px-4 mt-6`}>
                             <div css={tw`flex flex-row`}>
                                 <NewVariableButton />
 

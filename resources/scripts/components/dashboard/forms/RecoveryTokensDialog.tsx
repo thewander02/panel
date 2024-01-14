@@ -28,13 +28,13 @@ export default ({ tokens, open, onClose }: RecoveryTokenDialogProps) => {
         >
             <Dialog.Icon position={'container'} type={'success'} />
             <CopyOnClick text={tokens.join('\n')} showInNotification={false}>
-                <pre className={'mt-6 rounded bg-slate-800 p-2'}>
+                <pre className={'mt-6 rounded bg-zinc-800 p-2'}>
                     {grouped.map(value => (
                         <span key={value.join('_')} className={'block'}>
                             {value[0]}
-                            <span className={'mx-2 selection:bg-slate-800'}>&nbsp;</span>
+                            <span className={'mx-2 selection:bg-zinc-800'}>&nbsp;</span>
                             {value[1]}
-                            <span className={'selection:bg-slate-800'}>&nbsp;</span>
+                            <span className={'selection:bg-zinc-800'}>&nbsp;</span>
                         </span>
                     ))}
                 </pre>

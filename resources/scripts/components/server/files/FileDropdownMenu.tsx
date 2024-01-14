@@ -39,7 +39,7 @@ type ModalType = 'rename' | 'move' | 'chmod';
 const StyledRow = styled.div<{ $danger?: boolean }>`
     ${tw`p-2 flex items-center rounded`};
     ${props =>
-        props.$danger ? tw`hover:bg-red-100 hover:text-red-700` : tw`hover:bg-neutral-100 hover:text-neutral-700`};
+        props.$danger ? tw`hover:bg-red-100 hover:text-red-700` : tw`hover:bg-zinc-100 hover:text-zinc-700`};
 `;
 
 interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -138,7 +138,7 @@ const FileDropdownMenu = ({ file }: { file: FileObject }) => {
                 onConfirmed={doDeletion}
             >
                 You will not be able to recover the contents of&nbsp;
-                <span className={'font-semibold text-slate-50'}>{file.name}</span> once deleted.
+                <span className={'font-semibold text-zinc-50'}>{file.name}</span> once deleted.
             </Dialog.Confirm>
             <DropdownMenu
                 ref={onClickRef}

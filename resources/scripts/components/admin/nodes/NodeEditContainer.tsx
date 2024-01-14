@@ -117,7 +117,7 @@ export default () => {
                                 <NodeLimitContainer />
                             </div>
 
-                            <div css={tw`rounded shadow-md bg-neutral-700 mt-4 py-2 px-6`}>
+                            <div css={tw`rounded shadow-md bg-zinc-700 mt-4 py-2 px-6`}>
                                 <div css={tw`flex flex-row`}>
                                     <NodeDeleteButton nodeId={node?.id} onDeleted={() => navigate('/admin/nodes')} />
                                     <Button type={'submit'} css={tw`ml-auto`} disabled={isSubmitting || !isValid}>

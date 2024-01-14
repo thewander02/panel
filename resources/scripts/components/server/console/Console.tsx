@@ -232,7 +232,7 @@ export default () => {
                     />
                     <div
                         className={classNames(
-                            'text-slate-100 peer-focus:animate-pulse peer-focus:text-slate-50',
+                            'text-zinc-100 peer-focus:animate-pulse peer-focus:text-zinc-50',
                             styles.command_icon,
                         )}
                     >

@@ -87,8 +87,8 @@ const MountsContainer = () => {
         <AdminContentBlock title={'Mounts'}>
             <div css={tw`w-full flex flex-row items-center mb-8`}>
                 <div css={tw`flex flex-col flex-shrink`} style={{ minWidth: '0' }}>
-                    <h2 css={tw`text-2xl text-neutral-50 font-header font-medium`}>Mounts</h2>
-                    <p css={tw`text-base text-neutral-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
+                    <h2 css={tw`text-2xl text-zinc-50 font-jakarta font-medium`}>Mounts</h2>
+                    <p css={tw`text-base text-zinc-400 whitespace-nowrap overflow-ellipsis overflow-hidden`}>
                         Configure and manage additional mount points for servers.
                     </p>
                 </div>
@@ -149,15 +149,15 @@ const MountsContainer = () => {
                                                     <RowCheckbox id={mount.id} />
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={mount.id.toString()}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {mount.id}
                                                         </code>
                                                     </CopyOnClick>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <NavLink
                                                         to={`/admin/mounts/${mount.id}`}
                                                         css={tw`text-primary-400 hover:text-primary-300`}
@@ -166,17 +166,17 @@ const MountsContainer = () => {
                                                     </NavLink>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={mount.source.toString()}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {mount.source}
                                                         </code>
                                                     </CopyOnClick>
                                                 </td>
 
-                                                <td css={tw`px-6 text-sm text-neutral-200 text-left whitespace-nowrap`}>
+                                                <td css={tw`px-6 text-sm text-zinc-200 text-left whitespace-nowrap`}>
                                                     <CopyOnClick text={mount.target.toString()}>
-                                                        <code css={tw`font-mono bg-neutral-900 rounded py-1 px-2`}>
+                                                        <code css={tw`font-mono bg-zinc-900 rounded py-1 px-2`}>
                                                             {mount.target}
                                                         </code>
                                                     </CopyOnClick>

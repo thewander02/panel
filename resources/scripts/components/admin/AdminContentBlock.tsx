@@ -23,13 +23,13 @@ const AdminContentBlock: React.FC<{
         <>
             {showFlashKey && <FlashMessageRender byKey={showFlashKey} css={tw`mb-4`} />}
             {children}
-            {/* <p css={tw`text-center text-neutral-500 text-xs mt-4`}>
+            {/* <p css={tw`text-center text-zinc-500 text-xs mt-4`}>
                 &copy; 2015 - 2021&nbsp;
                 <a
                     rel={'noopener nofollow noreferrer'}
                     href={'https://pterodactyl.io'}
                     target={'_blank'}
-                    css={tw`no-underline text-neutral-500 hover:text-neutral-300`}
+                    css={tw`no-underline text-zinc-500 hover:text-zinc-300`}
                 >
                     Pterodactyl Software
                 </a>

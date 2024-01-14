@@ -73,7 +73,7 @@ export default ({
                         open={open}
                         onClose={onDialogClose}
                     >
-                        <div className={'fixed inset-0 z-40 bg-slate-900/50'} />
+                        <div className={'fixed inset-0 z-40 bg-zinc-900/50'} />
                         <div className={'fixed inset-0 z-50 overflow-y-auto'}>
                             <div
                                 ref={container}

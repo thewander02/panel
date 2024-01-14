@@ -6,7 +6,7 @@ import InputSpinner from '@/components/elements/InputSpinner';
 import Label from '@/components/elements/Label';
 
 const Dropdown = styled.div<{ expanded: boolean }>`
-    ${tw`absolute z-10 w-full mt-1 rounded-md shadow-lg bg-neutral-900`};
+    ${tw`absolute z-10 w-full mt-1 rounded-md shadow-lg bg-zinc-900`};
     ${props => !props.expanded && tw`hidden`};
 `;
 
@@ -51,8 +51,8 @@ export const Option = <T extends IdObj>({
                 id={selectId + '-select-item-' + id}
                 role="option"
                 css={[
-                    tw`relative py-2 pl-3 cursor-pointer select-none text-neutral-200 pr-9 hover:bg-neutral-700`,
-                    isHighlighted ? tw`bg-neutral-700` : null,
+                    tw`relative py-2 pl-3 cursor-pointer select-none text-zinc-200 pr-9 hover:bg-zinc-700`,
+                    isHighlighted ? tw`bg-zinc-700` : null,
                 ]}
                 onClick={onClick(item)}
             >
@@ -84,8 +84,8 @@ export const Option = <T extends IdObj>({
             id={selectId + 'select-item-' + id}
             role="option"
             css={[
-                tw`relative py-2 pl-3 cursor-pointer select-none text-neutral-200 pr-9 hover:bg-neutral-700`,
-                isHighlighted ? tw`bg-neutral-700` : null,
+                tw`relative py-2 pl-3 cursor-pointer select-none text-zinc-200 pr-9 hover:bg-zinc-700`,
+                isHighlighted ? tw`bg-zinc-700` : null,
             ]}
             onClick={onClick(item)}
         >
@@ -323,7 +323,7 @@ export const SearchableSelect = <T extends IdObj>({
                 >
                     {inputText !== '' && expanded && (
                         <svg
-                            css={tw`w-5 h-5 text-neutral-400 cursor-pointer`}
+                            css={tw`w-5 h-5 text-zinc-400 cursor-pointer`}
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="currentColor"
@@ -340,7 +340,7 @@ export const SearchableSelect = <T extends IdObj>({
                         </svg>
                     )}
                     <svg
-                        css={tw`w-5 h-5 text-neutral-400 pointer-events-none`}
+                        css={tw`w-5 h-5 text-zinc-400 pointer-events-none`}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
                         fill="currentColor"

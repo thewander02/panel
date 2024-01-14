@@ -58,7 +58,7 @@ export default () => {
                         'Advanced: The IO performance of this server relative to other running containers on the system. Value should be between 10 and 1000.'
                     }
                 />
-                <div css={tw`xl:col-span-2 bg-neutral-800 border border-neutral-900 shadow-inner p-4 rounded`}>
+                <div css={tw`xl:col-span-2 bg-zinc-800 border border-neutral-900 shadow-inner p-4 rounded`}>
                     <FormikSwitch
                         name={'limits.oomKiller'}
                         label={'Out of Memory Killer'}
