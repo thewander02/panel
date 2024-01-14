@@ -61,7 +61,6 @@ function App() {
 
     return (
         <>
-            {/* @ts-expect-error go away */}
             <GlobalStylesheet />
 
             <StoreProvider store={store}>
@@ -83,11 +82,11 @@ function App() {
                                 path="/server/:id/*"
                                 element={
                                     <AuthenticatedRoute>
-                                        <Spinner.Suspense>
-                                            <ServerContext.Provider>
-                                                <ServerRouter />
-                                            </ServerContext.Provider>
-                                        </Spinner.Suspense>
+                                         <Spinner.Suspense>
+                                             <ServerContext.Provider>
+                                                 <ServerRouter />
+                                             </ServerContext.Provider>
+                                         </Spinner.Suspense>
                                     </AuthenticatedRoute>
                                 }
                             />
