@@ -36,13 +36,13 @@ export default ({ subuser }: Props) => {
                     />
                     &nbsp;
                 </p>
-                <p css={tw`text-2xs text-zinc-500 uppercase hidden md:block`}>2FA Enabled</p>
+                <p css={tw`text-xs text-zinc-500 uppercase hidden md:block`}>2FA Enabled</p>
             </div>
             <div css={tw`ml-4 hidden md:block`}>
                 <p css={tw`font-medium text-center`}>
                     {subuser.permissions.filter(permission => permission !== 'websocket.connect').length}
                 </p>
-                <p css={tw`text-2xs text-zinc-500 uppercase`}>Permissions</p>
+                <p css={tw`text-xs text-zinc-500 uppercase`}>Permissions</p>
             </div>
             {subuser.uuid !== uuid && (
                 <>

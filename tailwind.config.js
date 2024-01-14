@@ -14,9 +14,6 @@ module.exports = {
                 primary: colors.blue,
                 cyan: colors.cyan,
             },
-            fontSize: {
-                '2xs': '0.625rem',
-            },
             transitionDuration: {
                 250: '250ms',
             },

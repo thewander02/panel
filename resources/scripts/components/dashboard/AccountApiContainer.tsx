@@ -72,7 +72,7 @@ export default () => {
                                 <FontAwesomeIcon icon={faKey} css={tw`text-zinc-300`} />
                                 <div css={tw`ml-4 flex-1 overflow-hidden`}>
                                     <p css={tw`text-sm break-words`}>{key.description}</p>
-                                    <p css={tw`text-2xs text-zinc-300 uppercase`}>
+                                    <p css={tw`text-xs text-zinc-300 uppercase`}>
                                         Last used:&nbsp;
                                         {key.lastUsedAt ? format(key.lastUsedAt, 'MMM do, yyyy HH:mm') : 'Never'}
                                     </p>
