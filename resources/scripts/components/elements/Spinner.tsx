@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import styled, { css, keyframes } from 'styled-components/macro';
+import styled, { keyframes, css } from 'styled-components';
 import tw from 'twin.macro';
 import ErrorBoundary from '@/components/elements/ErrorBoundary';
 
