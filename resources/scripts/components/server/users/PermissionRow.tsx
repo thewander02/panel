@@ -40,21 +40,21 @@ const PermissionRow = ({ permission, disabled }: Props) => {
 
     return (
         <Container htmlFor={`permission_${permission}`} className={disabled ? 'disabled' : undefined}>
-            <div css={tw`p-2`}>
+            <div className={`p-2`}>
                 <Checkbox
                     id={`permission_${permission}`}
                     name={'permissions'}
                     value={permission}
-                    css={tw`w-5 h-5 mr-2`}
+                    className={`w-5 h-5 mr-2`}
                     disabled={disabled}
                 />
             </div>
-            <div css={tw`flex-1`}>
-                <Label as={'p'} css={tw`font-medium`}>
+            <div className={`flex-1`}>
+                <Label as={'p'} className={`font-medium`}>
                     {pkey}
                 </Label>
                 {(permissions[key]?.keys?.[pkey]?.length ?? 0) > 0 && (
-                    <p css={tw`text-xs text-neutral-400 mt-1`}>{permissions[key]?.keys?.[pkey] ?? ''}</p>
+                    <p className={`text-xs text-neutral-400 mt-1`}>{permissions[key]?.keys?.[pkey] ?? ''}</p>
                 )}
             </div>
         </Container>

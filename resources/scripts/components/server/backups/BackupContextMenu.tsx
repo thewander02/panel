@@ -130,11 +130,11 @@ export default ({ backup }: Props) => {
                     Your server will be stopped. You will not be able to control the power state, access the file
                     manager, or create additional backups until completed.
                 </p>
-                <p css={tw`mt-4 -mb-2 bg-zinc-700 p-3 rounded`}>
-                    <label htmlFor={'restore_truncate'} css={tw`text-base flex items-center cursor-pointer`}>
+                <p className={`mt-4 -mb-2 bg-zinc-700 p-3 rounded`}>
+                    <label htmlFor={'restore_truncate'} className={`text-base flex items-center cursor-pointer`}>
                         <Input
                             type={'checkbox'}
-                            css={tw`text-red-500! w-5! h-5! mr-2`}
+                            className={`text-red-500! w-5! h-5! mr-2`}
                             id={'restore_truncate'}
                             value={'true'}
                             checked={truncate}
@@ -172,15 +172,15 @@ export default ({ backup }: Props) => {
                         </button>
                     )}
                 >
-                    <div css={tw`text-sm`}>
+                    <div className={`text-sm`}>
                         <Can action={'backup.download'}>
                             <DropdownButtonRow onClick={doDownload}>
-                                <span css={tw`ml-2`}>Download</span>
+                                <span className={`ml-2`}>Download</span>
                             </DropdownButtonRow>
                         </Can>
                         <Can action={'backup.restore'}>
                             <DropdownButtonRow onClick={() => setModal('restore')}>
-                                <span css={tw`ml-2`}>Restore</span>
+                                <span className={`ml-2`}>Restore</span>
                             </DropdownButtonRow>
                         </Can>
                         <Can action={'backup.delete'}>
@@ -190,7 +190,7 @@ export default ({ backup }: Props) => {
                                 </DropdownButtonRow>
                                 {!backup.isLocked && (
                                     <DropdownButtonRow danger onClick={() => setModal('delete')}>
-                                        <span css={tw`ml-2`}>Delete</span>
+                                        <span className={`ml-2`}>Delete</span>
                                     </DropdownButtonRow>
                                 )}
                             </>
@@ -200,7 +200,7 @@ export default ({ backup }: Props) => {
             ) : (
                 <button
                     onClick={() => setModal('delete')}
-                    css={tw`text-zinc-200 transition-colors duration-150 hover:text-zinc-100 p-2`}
+                    className={`text-zinc-200 transition-colors duration-150 hover:text-zinc-100 p-2`}
                 >
                     FIXME: delete
                 </button>

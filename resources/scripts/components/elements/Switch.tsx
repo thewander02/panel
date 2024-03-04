@@ -50,8 +50,8 @@ const Switch = ({ name, label, description, defaultChecked, readOnly, onChange, 
     const uuid = useMemo(() => v4(), []);
 
     return (
-        <div css={tw`flex items-center`}>
-            <ToggleContainer css={tw`flex-none`}>
+        <div className={`flex items-center`}>
+            <ToggleContainer className={`flex-none`}>
                 {children || (
                     <Input
                         id={uuid}
@@ -65,13 +65,13 @@ const Switch = ({ name, label, description, defaultChecked, readOnly, onChange, 
                 <Label htmlFor={uuid} />
             </ToggleContainer>
             {(label || description) && (
-                <div css={tw`ml-4 w-full`}>
+                <div className={`ml-4 w-full`}>
                     {label && (
                         <Label css={[tw`cursor-pointer`, !!description && tw`mb-0`]} htmlFor={uuid}>
                             {label}
                         </Label>
                     )}
-                    {description && <p css={tw`text-zinc-400 text-sm mt-2`}>{description}</p>}
+                    {description && <p className={`text-zinc-400 text-sm mt-2`}>{description}</p>}
                 </div>
             )}
         </div>

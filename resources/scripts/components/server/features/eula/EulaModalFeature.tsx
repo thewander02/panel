@@ -64,13 +64,13 @@ const EulaModalFeature = () => {
             closeOnBackground={false}
             showSpinnerOverlay={loading}
         >
-            <FlashMessageRender key={'feature:eula'} css={tw`mb-4`} />
-            <h2 css={tw`text-2xl mb-4 text-zinc-100`}>Accept Minecraft&reg; EULA</h2>
-            <p css={tw`text-zinc-200`}>
+            <FlashMessageRender key={'feature:eula'} className={`mb-4`} />
+            <h2 className={`text-2xl mb-4 text-zinc-100`}>Accept Minecraft&reg; EULA</h2>
+            <p className={`text-zinc-200`}>
                 By pressing {'"I Accept"'} below you are indicating your agreement to the&nbsp;
                 <a
                     target={'_blank'}
-                    css={tw`text-zinc-300 underline transition-colors duration-150 hover:text-zinc-400`}
+                    className={`text-zinc-300 underline transition-colors duration-150 hover:text-zinc-400`}
                     rel={'noreferrer noopener'}
                     href='https://account.mojang.com/documents/minecraft_eula'
                 >
@@ -78,11 +78,11 @@ const EulaModalFeature = () => {
                 </a>
                 .
             </p>
-            <div css={tw`mt-8 sm:flex items-center justify-end`}>
-                <Button isSecondary onClick={() => setVisible(false)} css={tw`w-full sm:w-auto border-transparent`}>
+            <div className={`mt-8 sm:flex items-center justify-end`}>
+                <Button isSecondary onClick={() => setVisible(false)} className={`w-full sm:w-auto border-transparent`}>
                     Cancel
                 </Button>
-                <Button onClick={onAcceptEULA} css={tw`mt-4 sm:mt-0 sm:ml-4 w-full sm:w-auto`}>
+                <Button onClick={onAcceptEULA} className={`mt-4 sm:mt-0 sm:ml-4 w-full sm:w-auto`}>
                     I Accept
                 </Button>
             </div>

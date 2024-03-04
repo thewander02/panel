@@ -109,17 +109,17 @@ function WebsocketHandler() {
 
     return error ? (
         <FadeTransition duration='duration-150' show>
-            <div css={tw`bg-red-500 py-2`}>
-                <ContentContainer css={tw`flex items-center justify-center`}>
+            <div className={`bg-red-500 py-2`}>
+                <ContentContainer className={`flex items-center justify-center`}>
                     {error === 'connecting' ? (
                         <>
                             <Spinner size={'small'} />
-                            <p css={tw`ml-2 text-sm text-red-100`}>
+                            <p className={`ml-2 text-sm text-red-100`}>
                                 We&apos;re having some trouble connecting to your server, please wait...
                             </p>
                         </>
                     ) : (
-                        <p css={tw`ml-2 text-sm text-white`}>{error}</p>
+                        <p className={`ml-2 text-sm text-white`}>{error}</p>
                     )}
                 </ContentContainer>
             </div>

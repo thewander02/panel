@@ -99,16 +99,16 @@ export default ({ ...props }: Props) => {
                         </FormikFieldWrapper>
                     </Form>
                     {servers.length > 0 && (
-                        <div css={tw`mt-6`}>
+                        <div className={`mt-6`}>
                             {servers.map((server) => (
                                 <ServerResult
                                     key={server.uuid}
                                     to={`/server/${server.id}`}
                                     onClick={() => props.onDismissed()}
                                 >
-                                    <div css={tw`flex-1 mr-4`}>
-                                        <p css={tw`text-sm`}>{server.name}</p>
-                                        <p css={tw`mt-1 text-xs text-zinc-400`}>
+                                    <div className={`flex-1 mr-4`}>
+                                        <p className={`text-sm`}>{server.name}</p>
+                                        <p className={`mt-1 text-xs text-zinc-400`}>
                                             {server.allocations
                                                 .filter((alloc) => alloc.isDefault)
                                                 .map((allocation) => (
@@ -118,8 +118,8 @@ export default ({ ...props }: Props) => {
                                                 ))}
                                         </p>
                                     </div>
-                                    <div css={tw`flex-none text-right`}>
-                                        <span css={tw`text-xs py-1 px-2 bg-blue-800 text-blue-100 rounded`}>
+                                    <div className={`flex-none text-right`}>
+                                        <span className={`text-xs py-1 px-2 bg-blue-800 text-blue-100 rounded`}>
                                             {server.node}
                                         </span>
                                     </div>

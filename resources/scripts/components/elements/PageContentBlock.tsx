@@ -19,7 +19,7 @@ const PageContentBlock: React.FC<PageContentBlockProps> = ({ title, showFlashKey
     return (
         <>
             <ContentContainer className={`${className && ''} py-2 sm:py-14`}>
-                {showFlashKey && <FlashMessageRender byKey={showFlashKey} css={tw`mb-4`} />}
+                {showFlashKey && <FlashMessageRender byKey={showFlashKey} className={`mb-4`} />}
                 {children}
             </ContentContainer>
         </>

@@ -46,7 +46,7 @@ const Container = styled.div<{ $type?: FlashMessageType }>`
 Container.displayName = 'MessageBox.Container';
 
 const MessageBox = ({ title, children, type }: Props) => (
-    <Container css={tw`lg:inline-flex`} $type={type} role={'alert'}>
+    <Container className={`lg:inline-flex`} $type={type} role={'alert'}>
         {title && (
             <span
                 className={'title'}
@@ -58,7 +58,7 @@ const MessageBox = ({ title, children, type }: Props) => (
                 {title}
             </span>
         )}
-        <span css={tw`mr-2 text-left flex-auto`}>{children}</span>
+        <span className={`mr-2 text-left flex-auto`}>{children}</span>
     </Container>
 );
 MessageBox.displayName = 'MessageBox';

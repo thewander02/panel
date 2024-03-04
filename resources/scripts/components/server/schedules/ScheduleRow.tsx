@@ -5,9 +5,9 @@ import ScheduleCronRow from '@/components/server/schedules/ScheduleCronRow';
 
 export default ({ schedule }: { schedule: Schedule }) => (
     <>
-        <div css={tw`flex-1 md:ml-4`}>
+        <div className={`flex-1 md:ml-4`}>
             <p>{schedule.name}</p>
-            <p css={tw`text-xs text-zinc-400`}>
+            <p className={`text-xs text-zinc-400`}>
                 Last run at: {schedule.lastRunAt ? format(schedule.lastRunAt, "MMM do 'at' h:mma") : 'never'}
             </p>
         </div>
@@ -21,7 +21,7 @@ export default ({ schedule }: { schedule: Schedule }) => (
                 {schedule.isActive ? 'Active' : 'Inactive'}
             </p>
         </div>
-        <ScheduleCronRow cron={schedule.cron} css={tw`mx-auto sm:mx-8 w-full sm:w-auto mt-4 sm:mt-0`} />
+        <ScheduleCronRow cron={schedule.cron} className={`mx-auto sm:mx-8 w-full sm:w-auto mt-4 sm:mt-0`} />
         <div>
             <p
                 css={[

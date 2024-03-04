@@ -74,7 +74,7 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer css={tw`w-full flex`}>
+                <LoginFormContainer className={`w-full flex`}>
                     <div className='flex items-start h-12 w-fit mb-4'>
                         <svg
                             className='flex h-full w-full shrink-0'
@@ -161,18 +161,18 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                         </a>
                     </div>
                     <Field type={'text'} label={'Username or Email'} name={'username'} disabled={isSubmitting} />
-                    <div css={tw`relative mt-6`}>
+                    <div className={`relative mt-6`}>
                         <Field type={'password'} label={'Password'} name={'password'} disabled={isSubmitting} />
                         <Link
                             to={'/auth/password'}
-                            css={tw`text-xs text-zinc-500 tracking-wide no-underline hover:text-zinc-600 absolute top-1 right-0`}
+                            className={`text-xs text-zinc-500 tracking-wide no-underline hover:text-zinc-600 absolute top-1 right-0`}
                         >
                             Forgot Password?
                         </Link>
                     </div>
-                    <div css={tw`mt-6`}>
+                    <div className={`mt-6`}>
                         <Button
-                            css={tw`mt-4 rounded-full bg-brand border-0 ring-0 outline-none capitalize font-bold text-sm py-2`}
+                            className={`mt-4 rounded-full bg-brand border-0 ring-0 outline-none capitalize font-bold text-sm py-2`}
                             type={'submit'}
                             size={'xlarge'}
                             isLoading={isSubmitting}

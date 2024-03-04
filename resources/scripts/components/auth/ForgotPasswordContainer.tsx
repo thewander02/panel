@@ -71,7 +71,7 @@ export default () => {
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer title={'Request Password Reset'} css={tw`w-full flex`}>
+                <LoginFormContainer title={'Request Password Reset'} className={`w-full flex`}>
                     <Field
                         light
                         label={'Email'}
@@ -81,7 +81,7 @@ export default () => {
                         name={'email'}
                         type={'email'}
                     />
-                    <div css={tw`mt-6`}>
+                    <div className={`mt-6`}>
                         <Button type={'submit'} size={'xlarge'} disabled={isSubmitting} isLoading={isSubmitting}>
                             Send Email
                         </Button>
@@ -101,10 +101,10 @@ export default () => {
                             }}
                         />
                     )}
-                    <div css={tw`mt-6 text-center`}>
+                    <div className={`mt-6 text-center`}>
                         <Link
                             to={'/auth/login'}
-                            css={tw`text-xs text-zinc-500 tracking-wide uppercase no-underline hover:text-zinc-700`}
+                            className={`text-xs text-zinc-500 tracking-wide uppercase no-underline hover:text-zinc-700`}
                         >
                             Return to Login
                         </Link>

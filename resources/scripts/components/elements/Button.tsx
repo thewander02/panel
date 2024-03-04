@@ -97,7 +97,7 @@ type ComponentProps = Omit<JSX.IntrinsicElements['button'], 'ref' | keyof Props>
 const Button: React.FC<ComponentProps> = ({ children, isLoading, ...props }) => (
     <ButtonStyle {...props}>
         {isLoading && (
-            <div css={tw`flex absolute justify-center items-center w-full h-full left-0 top-0`}>
+            <div className={`flex absolute justify-center items-center w-full h-full left-0 top-0`}>
                 <Spinner size={'small'} />
             </div>
         )}

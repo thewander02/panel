@@ -55,9 +55,9 @@ export default () => {
             {({ isSubmitting, isValid }) => (
                 <Fragment>
                     <SpinnerOverlay size={'large'} visible={isSubmitting} />
-                    <Form css={tw`m-0`}>
+                    <Form className={`m-0`}>
                         <Field id={'current_email'} type={'email'} name={'email'} label={'Email'} />
-                        <div css={tw`mt-6`}>
+                        <div className={`mt-6`}>
                             <Field
                                 id={'confirm_password'}
                                 type={'password'}
@@ -65,7 +65,7 @@ export default () => {
                                 label={'Confirm Password'}
                             />
                         </div>
-                        <div css={tw`mt-6`}>
+                        <div className={`mt-6`}>
                             <Button disabled={isSubmitting || !isValid}>Update Email</Button>
                         </div>
                     </Form>

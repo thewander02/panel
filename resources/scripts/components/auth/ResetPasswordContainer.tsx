@@ -61,12 +61,12 @@ export default ({ match, location }: RouteComponentProps<{ token: string }>) => 
             })}
         >
             {({ isSubmitting }) => (
-                <LoginFormContainer title={'Reset Password'} css={tw`w-full flex`}>
+                <LoginFormContainer title={'Reset Password'} className={`w-full flex`}>
                     <div>
                         <label>Email</label>
                         <Input value={email} isLight disabled />
                     </div>
-                    <div css={tw`mt-6`}>
+                    <div className={`mt-6`}>
                         <Field
                             light
                             label={'New Password'}
@@ -75,18 +75,18 @@ export default ({ match, location }: RouteComponentProps<{ token: string }>) => 
                             description={'Passwords must be at least 8 characters in length.'}
                         />
                     </div>
-                    <div css={tw`mt-6`}>
+                    <div className={`mt-6`}>
                         <Field light label={'Confirm New Password'} name={'passwordConfirmation'} type={'password'} />
                     </div>
-                    <div css={tw`mt-6`}>
+                    <div className={`mt-6`}>
                         <Button size={'xlarge'} type={'submit'} disabled={isSubmitting} isLoading={isSubmitting}>
                             Reset Password
                         </Button>
                     </div>
-                    <div css={tw`mt-6 text-center`}>
+                    <div className={`mt-6 text-center`}>
                         <Link
                             to={'/auth/login'}
-                            css={tw`text-xs text-zinc-500 tracking-wide no-underline uppercase hover:text-zinc-600`}
+                            className={`text-xs text-zinc-500 tracking-wide no-underline uppercase hover:text-zinc-600`}
                         >
                             Return to Login
                         </Link>

@@ -59,8 +59,8 @@ const NetworkContainer = () => {
                         {allocationLimit > 0 && (
                             <Can action={'allocation.create'}>
                                 <SpinnerOverlay visible={loading} />
-                                <div css={tw`sm:flex items-center justify-end`}>
-                                    <p css={tw`text-sm text-zinc-300 mb-4 sm:mr-6 sm:mb-0`}>
+                                <div className={`sm:flex items-center justify-end`}>
+                                    <p className={`text-sm text-zinc-300 mb-4 sm:mr-6 sm:mb-0`}>
                                         {data.length} of {allocationLimit} allowed allocations
                                     </p>
                                     {allocationLimit > data.length && (
