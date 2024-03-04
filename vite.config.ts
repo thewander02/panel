@@ -1,4 +1,5 @@
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
+import stailwc from 'stailwc/install';
 import laravel from 'laravel-vite-plugin';
 import { dirname, resolve } from 'pathe';
 import { fileURLToPath } from 'node:url';
@@ -31,9 +32,12 @@ export default defineConfig({
         laravel('resources/scripts/index.tsx'),
         manifestSRI(),
         react({
-            babel: {
-                plugins: ['babel-plugin-macros', 'babel-plugin-styled-components'],
-            },
+            plugins: [
+                stailwc({
+                    engine: 'styled-components',
+                }),
+                ['@swc/plugin-styled-components', {}],
+            ],
         }),
     ],
 
