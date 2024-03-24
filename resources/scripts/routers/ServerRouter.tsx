@@ -34,6 +34,7 @@ import MainWrapper from '@/components/elements/MainWrapper';
 import HugeIconsPeople from '@/components/elements/hugeicons/People';
 import HugeIconsConsole from '@/components/elements/hugeicons/Console';
 import HugeIconsClock from '@/components/elements/hugeicons/Clock';
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/elements/Resizable';
 
 export default () => {
     const params = useParams<'id'>();
@@ -120,152 +121,183 @@ export default () => {
                             },
                         }}
                     />
-                    <MainSidebar className='hidden lg:flex'>
-                        <div
-                            className='absolute bg-brand w-[3px] h-10 left-0 rounded-full pointer-events-none'
-                            style={{
-                                top,
-                                opacity: top === '0' ? 0 : 1,
-                                transition:
-                                    'top linear(0,0.006,0.025 2.8%,0.101 6.1%,0.539 18.9%,0.721 25.3%,0.849 31.5%,0.937 38.1%,0.968 41.8%,0.991 45.7%,1.006 50.1%,1.015 55%,1.017 63.9%,1.001) 390ms',
-                            }}
-                        />
-                        <div
-                            className='absolute bg-brand w-12 h-10 blur-2xl left-0 rounded-full pointer-events-none'
-                            style={{
-                                top,
-                                opacity: top === '0' ? 0 : 0.5,
-                                transition:
-                                    'top linear(0,0.006,0.025 2.8%,0.101 6.1%,0.539 18.9%,0.721 25.3%,0.849 31.5%,0.937 38.1%,0.968 41.8%,0.991 45.7%,1.006 50.1%,1.015 55%,1.017 63.9%,1.001) 390ms',
-                            }}
-                        />
-                        <div className='flex flex-row items-center justify-between h-8'>
-                            <NavLink to={'/'} className='flex shrink-0 h-full w-fit'>
-                                <Logo />
-                            </NavLink>
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <button className='w-8 h-8 flex items-center justify-center rounded-md text-white'>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='32'
-                                            height='32'
-                                            fill='currentColor'
-                                            viewBox='0 0 256 256'
-                                            className='flex shrink-0 h-full w-full'
+                    <ResizablePanelGroup direction='horizontal'>
+                        <ResizablePanel defaultSize={15}>
+                            <MainSidebar className='hidden h-full !w-full lg:flex'>
+                                <div
+                                    className='absolute bg-brand w-[3px] h-10 left-0 rounded-full pointer-events-none'
+                                    style={{
+                                        top,
+                                        opacity: top === '0' ? 0 : 1,
+                                        transition:
+                                            'top linear(0,0.006,0.025 2.8%,0.101 6.1%,0.539 18.9%,0.721 25.3%,0.849 31.5%,0.937 38.1%,0.968 41.8%,0.991 45.7%,1.006 50.1%,1.015 55%,1.017 63.9%,1.001) 390ms',
+                                    }}
+                                />
+                                <div
+                                    className='absolute bg-brand w-12 h-10 blur-2xl left-0 rounded-full pointer-events-none'
+                                    style={{
+                                        top,
+                                        opacity: top === '0' ? 0 : 0.5,
+                                        transition:
+                                            'top linear(0,0.006,0.025 2.8%,0.101 6.1%,0.539 18.9%,0.721 25.3%,0.849 31.5%,0.937 38.1%,0.968 41.8%,0.991 45.7%,1.006 50.1%,1.015 55%,1.017 63.9%,1.001) 390ms',
+                                    }}
+                                />
+                                <div className='flex flex-row items-center justify-between h-8'>
+                                    <NavLink to={'/'} className='flex shrink-0 h-full w-fit'>
+                                        <Logo />
+                                    </NavLink>
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <button className='w-8 h-8 flex items-center justify-center rounded-md text-white'>
+                                                <svg
+                                                    xmlns='http://www.w3.org/2000/svg'
+                                                    width='32'
+                                                    height='32'
+                                                    fill='currentColor'
+                                                    viewBox='0 0 256 256'
+                                                    className='flex shrink-0 h-full w-full'
+                                                >
+                                                    {/* @ts-ignore */}
+                                                    <path d='M138,128a10,10,0,1,1-10-10A10,10,0,0,1,138,128ZM60,118a10,10,0,1,0,10,10A10,10,0,0,0,60,118Zm136,0a10,10,0,1,0,10,10A10,10,0,0,0,196,118Z'></path>
+                                                </svg>
+                                            </button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent className='z-[99999]' sideOffset={8}>
+                                            <DropdownMenuItem onClick={onTriggerLogout}>Log Out</DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                </div>
+                                <div className='mt-8 mb-4 bg-[#ffffff33] min-h-[1px] w-6'></div>
+                                <div className='pyro-subnav-routes-wrapper'>
+                                    {/* lord forgive me for hardcoding this */}
+                                    <NavLink className='flex flex-row items-center' to={`/server/${id}`} end>
+                                        <HugeIconsHome fill='currentColor' />
+                                        <p>Home</p>
+                                    </NavLink>
+                                    <Can action={'file.*'} matchAny>
+                                        <NavLink className='flex flex-row items-center' to={`/server/${id}/files`} end>
+                                            <HugeIconsFolder fill='currentColor' />
+                                            <p>Files</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'database.*'} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/databases`}
+                                            end
                                         >
-                                            {/* @ts-ignore */}
-                                            <path d='M138,128a10,10,0,1,1-10-10A10,10,0,0,1,138,128ZM60,118a10,10,0,1,0,10,10A10,10,0,0,0,60,118Zm136,0a10,10,0,1,0,10,10A10,10,0,0,0,196,118Z'></path>
-                                        </svg>
-                                    </button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent className='z-[99999]' sideOffset={8}>
-                                    <DropdownMenuItem onClick={onTriggerLogout}>Log Out</DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </div>
-                        <div className='mt-8 mb-4 bg-[#ffffff33] min-h-[1px] w-6'></div>
-                        <div className='pyro-subnav-routes-wrapper'>
-                            {/* lord forgive me for hardcoding this */}
-                            <NavLink className='flex flex-row items-center' to={`/server/${id}`} end>
-                                <HugeIconsHome fill='currentColor' />
-                                <p>Home</p>
-                            </NavLink>
-                            <Can action={'file.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/files`} end>
-                                    <HugeIconsFolder fill='currentColor' />
-                                    <p>Files</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'database.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/databases`} end>
-                                    <HugeIconsDatabase fill='currentColor' />
-                                    <p>Databases</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'backup.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/backups`} end>
-                                    <HugeIconsCloudUp fill='currentColor' />
-                                    <p>Backups</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'allocation.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/network`} end>
-                                    <HugeIconsConnections fill='currentColor' />
-                                    <p>Networking</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'user.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/users`} end>
-                                    <HugeIconsPeople fill='currentColor' />
-                                    <p>Users</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'startup.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/startup`} end>
-                                    <HugeIconsConsole fill='currentColor' />
-                                    <p>Startup</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={'schedule.*'} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/schedules`} end>
-                                    <HugeIconsClock fill='currentColor' />
-                                    <p>Schedules</p>
-                                </NavLink>
-                            </Can>
-                            <Can action={['settings.*', 'file.sftp']} matchAny>
-                                <NavLink className='flex flex-row items-center' to={`/server/${id}/settings`} end>
-                                    <HugeIconsDashboardSettings fill='currentColor' />
-                                    <p>Settings</p>
-                                </NavLink>
-                            </Can>
-                            {rootAdmin && (
-                                // eslint-disable-next-line react/jsx-no-target-blank
-                                <a href={`/admin/servers/view/${serverId}`} target={'_blank'}>
-                                    <div className='ml-1'>Manage Server </div>
-                                    <span className='z-10 rounded-full bg-brand px-2 py-1 text-xs text-white'>
-                                        Staff
-                                    </span>
-                                </a>
-                            )}
-                        </div>
-                    </MainSidebar>
+                                            <HugeIconsDatabase fill='currentColor' />
+                                            <p>Databases</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'backup.*'} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/backups`}
+                                            end
+                                        >
+                                            <HugeIconsCloudUp fill='currentColor' />
+                                            <p>Backups</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'allocation.*'} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/network`}
+                                            end
+                                        >
+                                            <HugeIconsConnections fill='currentColor' />
+                                            <p>Networking</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'user.*'} matchAny>
+                                        <NavLink className='flex flex-row items-center' to={`/server/${id}/users`} end>
+                                            <HugeIconsPeople fill='currentColor' />
+                                            <p>Users</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'startup.*'} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/startup`}
+                                            end
+                                        >
+                                            <HugeIconsConsole fill='currentColor' />
+                                            <p>Startup</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={'schedule.*'} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/schedules`}
+                                            end
+                                        >
+                                            <HugeIconsClock fill='currentColor' />
+                                            <p>Schedules</p>
+                                        </NavLink>
+                                    </Can>
+                                    <Can action={['settings.*', 'file.sftp']} matchAny>
+                                        <NavLink
+                                            className='flex flex-row items-center'
+                                            to={`/server/${id}/settings`}
+                                            end
+                                        >
+                                            <HugeIconsDashboardSettings fill='currentColor' />
+                                            <p>Settings</p>
+                                        </NavLink>
+                                    </Can>
+                                    {rootAdmin && (
+                                        // eslint-disable-next-line react/jsx-no-target-blank
+                                        <a href={`/admin/servers/view/${serverId}`} target={'_blank'}>
+                                            <div className='ml-1'>Manage Server </div>
+                                            <span className='z-10 rounded-full bg-brand px-2 py-1 text-xs text-white'>
+                                                Staff
+                                            </span>
+                                        </a>
+                                    )}
+                                </div>
+                            </MainSidebar>
+                        </ResizablePanel>
+                        <ResizableHandle withHandle />
+                        <ResizablePanel>
+                            <MainWrapper>
+                                <main
+                                    data-pyro-main=''
+                                    data-pyro-transitionrouter=''
+                                    className='relative inset-[1px] w-full h-full overflow-y-auto overflow-x-hidden rounded-md bg-[#08080875]'
+                                >
+                                    {inConflictState &&
+                                    (!rootAdmin || (rootAdmin && !location.pathname.endsWith(`/server/${id}`))) ? (
+                                        <ConflictStateRenderer />
+                                    ) : (
+                                        <ErrorBoundary>
+                                            <Routes location={location}>
+                                                {routes.server.map(({ route, permission, component: Component }) => (
+                                                    <Route
+                                                        key={route}
+                                                        path={route}
+                                                        element={
+                                                            <PermissionRoute permission={permission}>
+                                                                <Suspense fallback={null}>
+                                                                    <Component />
+                                                                </Suspense>
+                                                            </PermissionRoute>
+                                                        }
+                                                    />
+                                                ))}
+
+                                                <Route path='*' element={<NotFound />} />
+                                            </Routes>
+                                        </ErrorBoundary>
+                                    )}
+                                </main>
+                            </MainWrapper>
+                        </ResizablePanel>
+                    </ResizablePanelGroup>
                     <CommandMenu />
                     <InstallListener />
                     <TransferListener />
                     <WebsocketHandler />
-                    <MainWrapper>
-                        <main
-                            data-pyro-main=''
-                            data-pyro-transitionrouter=''
-                            className='relative inset-[1px] w-full h-full overflow-y-auto overflow-x-hidden rounded-md bg-[#08080875]'
-                        >
-                            {inConflictState &&
-                            (!rootAdmin || (rootAdmin && !location.pathname.endsWith(`/server/${id}`))) ? (
-                                <ConflictStateRenderer />
-                            ) : (
-                                <ErrorBoundary>
-                                    <Routes location={location}>
-                                        {routes.server.map(({ route, permission, component: Component }) => (
-                                            <Route
-                                                key={route}
-                                                path={route}
-                                                element={
-                                                    <PermissionRoute permission={permission}>
-                                                        <Suspense fallback={null}>
-                                                            <Component />
-                                                        </Suspense>
-                                                    </PermissionRoute>
-                                                }
-                                            />
-                                        ))}
-
-                                        <Route path='*' element={<NotFound />} />
-                                    </Routes>
-                                </ErrorBoundary>
-                            )}
-                        </main>
-                    </MainWrapper>
                 </>
             )}
         </Fragment>
