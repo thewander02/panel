@@ -1,7 +1,15 @@
 {
-    "names": {
-        "panel": "pyrodactyl",
-        "company": "pyro.host"
+    "static": {
+        "names": {
+            "panel": "pyrodactyl",
+            "company": "pyro.host"
+        },
+        "urls": {
+            "panel": "https://panel.pyro.host",
+            "support": "https://pyro.host/support",
+            "billing": "https://pyro.host/billing",
+            "website": "https://pyro.host"
+        }
     },
     "theme": {
         "images": {
