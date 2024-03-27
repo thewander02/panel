@@ -1,0 +1,16 @@
+{
+    "names": {
+        "panel": "pyrodactyl",
+        "company": "pyro.host"
+    },
+    "theme": {
+        "images": {
+            "logo": "https://pyro.host/logo.png",
+            "loginLogo": "https://pyro.host/logo.png",
+            "panelLogo": "https://pyro.host/logo.png"
+        },
+        "colors": {
+            "brand": "fa4e49"
+        }
+    }
+}
