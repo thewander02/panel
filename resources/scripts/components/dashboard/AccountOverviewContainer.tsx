@@ -17,8 +17,6 @@ export default () => {
     const { state } = useLocation();
 
     const user = useStoreState((state: State<ApplicationStore>) => state.user.data!);
-    const emailHash = sha256(user.email).toString();
-    const avatar = `https://www.gravatar.com/avatar/${emailHash}?s=128&d=identicon`;
 
     return (
         <PageContentBlock title={'Your Settings'}>
@@ -32,7 +30,8 @@ export default () => {
             <ContentBox>
                 <Tabs defaultValue={'email'}>
                     <div className='flex items-center gap-4 pb-6'>
-                        <img src={avatar} alt='User Avatar' className='w-16 h-16 rounded-full' />
+                        {/* avatar img placeholder */}
+                        <div className='w-16 h-16 rounded-full bg-zinc-900' />
                         <div>
                             <p className='text-lg font-semibold'>{user.username}</p>
                             <p className='text-sm text-zinc-500'>{user.email}</p>
