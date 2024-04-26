@@ -1,7 +1,7 @@
 {
     "name": "pyrodactyl",
-    "version": "1.5.0",
-    "buildNumber": "150000",
+    "version": "1.7.0",
+    "buildNumber": "170000",
     "engines": {
         "node": ">=20.0"
     },
@@ -47,9 +47,9 @@
         "million": "^3.0.6",
         "pathe": "^1.1.2",
         "qrcode.react": "^3.1.0",
-        "react": "^18.2.0",
+        "react": "^18.3.0",
         "react-chartjs-2": "^5.2.0",
-        "react-dom": "^18.2.0",
+        "react-dom": "^18.3.0",
         "react-fast-compare": "^3.2.2",
         "react-router-dom": "^6.22.3",
         "reaptcha": "^1.12.1",
@@ -72,9 +72,9 @@
         "@types/events": "^3.0.3",
         "@types/node": "^20.12.7",
         "@types/qrcode.react": "^1.0.5",
-        "@types/react": "^18.2.75",
+        "@types/react": "^18.3.0",
         "@types/react-copy-to-clipboard": "^5.0.7",
-        "@types/react-dom": "^18.2.24",
+        "@types/react-dom": "^18.3.0",
         "@types/react-redux": "^7.1.33",
         "@types/uuid": "^9.0.8",
         "@typescript-eslint/eslint-plugin": "^7.5.0",

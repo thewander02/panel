@@ -125,7 +125,7 @@ export default () => {
             <FlashMessageRender byKey={'files:view'} />
 
             <ErrorBoundary>
-                <div className={`flex py-6 bg-[#ffffff11] rounded-md border-[1px] border-[#ffffff07]`}>
+                <div className={`flex py-6 bg-[#ffffff11] rounded-md rounded-b-none border-[1px] border-[#ffffff07] border-b-0`}>
                     <span className='-ml-[2rem]'></span>
                     <FileManagerBreadcrumbs withinFileEditor isNewFile={action !== 'edit'} />
                 </div>
@@ -153,7 +153,7 @@ export default () => {
                 }}
             />
 
-            <div className={`relative h-full [&>div>div]:h-full [&>div>div]:!outline-none w-full`}>
+            <div className={`relative h-full bg-[#ffffff11] border-[1px] border-[#ffffff07] border-t-0 [&>div>div]:h-full [&>div>div]:!outline-none w-full`}>
                 <Editor
                     style={{ height: 'calc(100vh - 86px)', width: '100%' }}
                     filename={filename}
@@ -236,7 +236,7 @@ export default () => {
                                     background:
                                         'radial-gradient(109.26% 109.26% at 49.83% 13.37%, rgb(255, 52, 60) 0%, rgb(240, 111, 83) 100%)',
                                 }}
-                                className='pl-8 pr-6 py-3 border-[1px] border-[#ffffff12] rounded-l-full text-sm font-bold shadow-md'
+                                className='h-[46px] pl-8 pr-6 py-3 border-[1px] border-[#ffffff12] rounded-l-full text-sm font-bold shadow-md'
                                 onClick={() => save()}
                             >
                                 Save <span className='ml-2 font-mono text-xs font-bold uppercase'>CTRL + S</span>
